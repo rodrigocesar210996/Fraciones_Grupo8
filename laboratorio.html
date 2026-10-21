@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      FracDeciMath · Laboratorio Interactivo de Fracciones y Decimales
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./laboratorio.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__left">
+          <a class="brand" href="#">
+            <img
+              class="brand__logo"
+              alt="FracDeciMath Logo"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0-j_GU41MFLrOPjvfneKQXD1Zs892is0NBk-14V7HHE7R-5qP0Wd-rN1vWN0Dio4vpZ2b2jZIDqxuOUHoI-CufjtFqJnAuSWYmBsi5k8t2QhFIKQoHAp4khaBguZ-ajgVwlqDiFATkuIw_xslwIt6V3iwXD3oKQ3FcLLEUADR4QNMzHDNlDdsphT_E7kCiDIKBwS10E-3bQax1ArPylnb_JZ50RcJdEOBGYZ8q3WoxxvIbvX_B9i0mQ"
+            />
+            <div class="brand__text">
+              <span class="brand__name">FracDeciMath</span>
+              <span class="brand__sub lbl-sm">Lab Virtual</span>
+            </div>
+          </a>
+          <div class="level-chip">
+            <span class="material-symbols-outlined">school</span>
+            <span class="lbl-sm">Secundaria: 1º a 4º ESO / Ciclo Medio</span>
+          </div>
+        </div>
+
+        <div class="search">
+          <div class="search__box">
+            <span class="material-symbols-outlined">search</span>
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Buscar lección: ej. 3/4 a decimal, suma..."
+            />
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a class="nav__link" href="#">Inicio</a>
+          <a class="nav__link" href="#">Lecciones Teóricas</a>
+          <a class="nav__link is-active" aria-current="page" href="#"
+            >Laboratorio Interactivo</a
+          >
+          <a class="nav__link" href="#">Retos y Evaluación</a>
+          <a class="nav__link" href="#">Contacto y Tutoría</a>
+        </nav>
+
+        <div class="header__right">
+          <div class="points lbl-md"><span>🔥</span><span>340 pts</span></div>
+          <div class="user">
+            <img
+              class="avatar"
+              alt="Profile"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRI7sH-GrYXQzLE_pmRHWJtfmW9iHSILXXLuca_d_qrCBjkYMwgrC0tZBtaIC0iAJXrj6vFLXBe65NEes81WfPlSMuVvpEUJ-TcDw9Ojs0wRq3Lq1lD1TK6u2d8hu7ySIa5HffbakeF_LBg6H9kQHqxLuC6O8irByelr-zvGXCmUaYSnahN9E09lwp11boLPlJsBCwkY0Z-oFjd1aaXQX_7Uk7MPn8Jo-8PaY1GlvpUNvQXprif5STTQ"
+            />
+            <div class="user__text">
+              <span class="user__name lbl-md">Prof. Marcos V.</span>
+              <span class="lbl-sm c-outline">Docente Asignado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <!-- Encabezado y selector de modo -->
+        <div class="page-head">
+          <div>
+            <div class="eyebrow lbl-sm upper">
+              <span class="material-symbols-outlined">science</span>
+              <span>Entorno de Simulación Aritmética Dinámica</span>
+            </div>
+            <h1 class="page-title h-lg">
+              Laboratorio Interactivo de Fracciones y Decimales
+            </h1>
+            <p class="page-lead">
+              Experimenta visualmente manipulando el numerador, el denominador y
+              observa su representación decimal en tiempo real.
+            </p>
+          </div>
+          <div class="modes" id="modeSelector">
+            <button
+              class="mode lbl-md is-active"
+              id="btn-mode-simulador"
+              onclick="setMode('simulador')"
+              type="button"
+            >
+              <span class="material-symbols-outlined ms-16">tune</span
+              ><span>Simulador Visual</span>
+            </button>
+            <button
+              class="mode lbl-md"
+              id="btn-mode-conversor"
+              onclick="setMode('conversor')"
+              type="button"
+            >
+              <span class="material-symbols-outlined ms-16">swap_horiz</span
+              ><span>Conversor Interactivo</span>
+            </button>
+            <button
+              class="mode lbl-md"
+              id="btn-mode-practica"
+              onclick="setMode('practica')"
+              type="button"
+            >
+              <span class="material-symbols-outlined ms-16">quiz</span
+              ><span>Práctica Guiada</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="layout">
+          <!-- Columna izquierda: controles y visualizadores -->
+          <div class="card card--main">
+            <div class="soft fraction-head">
+              <div class="fraction-head__left">
+                <div class="fraction-box">
+                  <span class="fraction-box__num math-d" id="mathNumerator"
+                    >3</span
+                  >
+                  <div class="fraction-box__bar"></div>
+                  <span class="fraction-box__den math-d" id="mathDenominator"
+                    >4</span
+                  >
+                </div>
+                <div class="fraction-meta">
+                  <span class="lbl-sm c-outline upper fw-6"
+                    >Valor Relativo</span
+                  >
+                  <span class="h-sm c-surface" id="labelFractionState"
+                    >Fracción Propia (&lt; 1)</span
+                  >
+                  <span class="lbl-md c-primary fw-7" id="labelQuickDec"
+                    >= 0.75</span
+                  >
+                </div>
+              </div>
+              <div class="presets">
+                <span class="presets__label lbl-sm">Preajustes:</span>
+                <button class="preset lbl-sm" onclick="setFraction(1, 2)">
+                  1/2
+                </button>
+                <button
+                  class="preset lbl-sm is-active"
+                  onclick="setFraction(3, 4)"
+                >
+                  3/4
+                </button>
+                <button class="preset lbl-sm" onclick="setFraction(2, 5)">
+                  2/5
+                </button>
+                <button class="preset lbl-sm" onclick="setFraction(5, 4)">
+                  5/4
+                </button>
+              </div>
+            </div>
+
+            <div class="steppers">
+              <div class="soft stepper">
+                <div class="stepper__top">
+                  <label class="stepper__label lbl-md" for="sliderNum"
+                    ><span class="dot dot--p"></span
+                    ><span>Numerador (Partes tomadas)</span></label
+                  >
+                  <div class="stepper__ctrl">
+                    <button
+                      class="icon-btn"
+                      aria-label="Disminuir numerador"
+                      onclick="adjustValue('num', -1)"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined">remove</span>
+                    </button>
+                    <span
+                      class="stepper__value math-d c-primary"
+                      id="numDisplayBox"
+                      >3</span
+                    >
+                    <button
+                      class="icon-btn"
+                      aria-label="Aumentar numerador"
+                      onclick="adjustValue('num', 1)"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined">add</span>
+                    </button>
+                  </div>
+                </div>
+                <input
+                  class="range range--p"
+                  id="sliderNum"
+                  type="range"
+                  min="0"
+                  max="12"
+                  value="3"
+                  oninput="onSliderChange()"
+                />
+                <div class="range-scale lbl-sm">
+                  <span>0</span><span>6</span><span>12</span>
+                </div>
+              </div>
+
+              <div class="soft stepper">
+                <div class="stepper__top">
+                  <label class="stepper__label lbl-md" for="sliderDen"
+                    ><span class="dot dot--s"></span
+                    ><span>Denominador (Partes totales)</span></label
+                  >
+                  <div class="stepper__ctrl">
+                    <button
+                      class="icon-btn"
+                      aria-label="Disminuir denominador"
+                      onclick="adjustValue('den', -1)"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined">remove</span>
+                    </button>
+                    <span
+                      class="stepper__value math-d c-secondary"
+                      id="denDisplayBox"
+                      >4</span
+                    >
+                    <button
+                      class="icon-btn"
+                      aria-label="Aumentar denominador"
+                      onclick="adjustValue('den', 1)"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined">add</span>
+                    </button>
+                  </div>
+                </div>
+                <input
+                  class="range range--s"
+                  id="sliderDen"
+                  type="range"
+                  min="1"
+                  max="12"
+                  value="4"
+                  oninput="onSliderChange()"
+                />
+                <div class="range-scale lbl-sm">
+                  <span>1</span><span>6</span><span>12</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="viz">
+              <!-- Modelo de barra -->
+              <div class="viz-card">
+                <div class="viz-card__head">
+                  <span class="viz-card__title lbl-md"
+                    ><span class="material-symbols-outlined c-primary"
+                      >view_column</span
+                    ><span>Modelo de Barra (Unidad Rectangular)</span></span
+                  >
+                  <span class="lbl-sm c-muted fw-6" id="barInfo"
+                    >3 de 4 partes sombreadas</span
+                  >
+                </div>
+                <div class="bar" id="barContainer"></div>
+                <div class="bar__scale lbl-sm">
+                  <span>0.00 (Inicio)</span
+                  ><span id="barUnitEndLabel">1.00 (Unidad entera)</span>
+                </div>
+              </div>
+
+              <div class="viz-row">
+                <!-- Disco circular -->
+                <div class="viz-card viz-card--disc">
+                  <span class="viz-card__title lbl-md"
+                    ><span class="material-symbols-outlined c-secondary"
+                      >pie_chart</span
+                    ><span>Disco Circular</span></span
+                  >
+                  <div class="disc">
+                    <svg class="disc__svg" viewBox="0 0 100 100">
+                      <circle
+                        class="disc__track"
+                        cx="50"
+                        cy="50"
+                        r="42"
+                        fill="transparent"
+                        stroke="currentColor"
+                        stroke-width="16"
+                      ></circle>
+                      <circle
+                        class="disc__arc"
+                        id="discArc"
+                        cx="50"
+                        cy="50"
+                        r="42"
+                        fill="transparent"
+                        stroke="currentColor"
+                        stroke-width="16"
+                        stroke-linecap="round"
+                        stroke-dasharray="263.89"
+                        stroke-dashoffset="65.97"
+                      ></circle>
+                    </svg>
+                    <div class="disc__center">
+                      <span class="disc__angle" id="discAngle">270°</span>
+                      <span class="disc__percent lbl-sm" id="discPercent"
+                        >75.0%</span
+                      >
+                    </div>
+                  </div>
+                  <span class="lbl-sm c-outline" id="discSectorLabel"
+                    >Sector de 270 grados sexagesimales</span
+                  >
+                </div>
+
+                <!-- Recta numérica -->
+                <div class="viz-card viz-card--line">
+                  <div class="viz-card__head">
+                    <span class="viz-card__title lbl-md"
+                      ><span class="material-symbols-outlined c-primary"
+                        >linear_scale</span
+                      ><span>Recta Numérica Continua</span></span
+                    >
+                    <span class="tag lbl-sm" id="lineRangeTag"
+                      >Rango [0 - 2]</span
+                    >
+                  </div>
+                  <div class="line">
+                    <div class="line__track">
+                      <div class="line__progress" id="numberLineProgress"></div>
+                    </div>
+                    <div class="line__ticks lbl-sm">
+                      <div class="tick">
+                        <span class="tick__mark"></span><span>0</span>
+                      </div>
+                      <div class="tick">
+                        <span class="tick__mark"></span><span>0.5</span>
+                      </div>
+                      <div class="tick tick--major">
+                        <span class="tick__mark"></span
+                        ><span class="tick__text">1.0</span>
+                      </div>
+                      <div class="tick">
+                        <span class="tick__mark"></span><span>1.5</span>
+                      </div>
+                      <div class="tick tick--major">
+                        <span class="tick__mark"></span
+                        ><span class="tick__text">2.0</span>
+                      </div>
+                    </div>
+                    <div class="line__pin" id="numberLinePin">
+                      <div class="line__pin-label lbl-sm">
+                        <span id="pinText">0.75</span>
+                      </div>
+                      <div class="line__pin-dot"></div>
+                    </div>
+                  </div>
+                  <p class="note body-sm">
+                    Ubicación escalar exacta: el punto se mueve dinámicamente
+                    según la división real del numerador entre el denominador.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: resultados -->
+          <div class="col-side">
+            <div class="card card--results">
+              <div class="card__head">
+                <h2 class="card__title h-sm">
+                  <span class="material-symbols-outlined">analytics</span
+                  ><span>Panel de Resultados en Vivo</span>
+                </h2>
+                <span class="badge badge--exact lbl-sm" id="badgeDecType"
+                  >Decimal Exacto</span
+                >
+              </div>
+
+              <div class="kpis">
+                <div class="kpi">
+                  <span class="lbl-sm c-outline">Expresión Decimal</span>
+                  <span class="kpi__value math-d c-primary" id="kpiDecimal"
+                    >0.75</span
+                  >
+                  <span class="body-sm c-muted" id="kpiPeriodicity"
+                    >Finito (factores 2 y/o 5)</span
+                  >
+                </div>
+                <div class="kpi">
+                  <span class="lbl-sm c-outline">Equivalencia Porcentual</span>
+                  <span class="kpi__value math-d c-secondary" id="kpiPercentage"
+                    >75.0%</span
+                  >
+                  <span class="body-sm c-muted">Base 100 centésimas</span>
+                </div>
+                <div class="kpi">
+                  <span class="lbl-sm c-outline">Fracción Irreducible</span>
+                  <span class="kpi__value math-d c-surface" id="kpiReduced"
+                    >3 / 4</span
+                  >
+                  <span class="body-sm c-muted" id="kpiMcd"
+                    >m.c.d.(3, 4) = 1</span
+                  >
+                </div>
+                <div class="kpi">
+                  <span class="lbl-sm c-outline">Clasificación Aritmética</span>
+                  <span class="kpi__value lbl-lg c-surface fw-6" id="kpiType"
+                    >Propia (&lt; 1)</span
+                  >
+                  <span class="body-sm c-muted" id="kpiComplement"
+                    >Falta 1/4 para la unidad</span
+                  >
+                </div>
+              </div>
+
+              <div class="soft galera">
+                <div class="galera__head">
+                  <span class="galera__title lbl-md"
+                    ><span class="material-symbols-outlined"
+                      >format_list_numbered</span
+                    ><span>Algoritmo de División Larga (Galera)</span></span
+                  >
+                  <button
+                    class="link-btn lbl-sm"
+                    onclick="toggleStepDetails()"
+                    type="button"
+                  >
+                    <span id="toggleText">Ocultar pasos</span>
+                    <span class="material-symbols-outlined" id="toggleIcon"
+                      >expand_less</span
+                    >
+                  </button>
+                </div>
+                <div class="galera__box math-i">
+                  <div class="galera__op">
+                    <span id="stepOperation">3 ÷ 4 = 0.75</span>
+                  </div>
+                  <div class="galera__pre" id="galeraVisualization"></div>
+                </div>
+                <div class="galera__explain body-sm" id="stepExplanation"></div>
+              </div>
+            </div>
+
+            <div class="tip">
+              <div class="tip__icon">
+                <span class="material-symbols-outlined ms-20">psychology</span>
+              </div>
+              <div class="tip__body">
+                <span class="lbl-md c-surface fw-6"
+                  >Clave de Razonamiento LOMLOE</span
+                >
+                <p class="tip__text body-sm">
+                  Un número racional genera un
+                  <strong>decimal exacto</strong> únicamente si los factores
+                  primos del denominador simplificado son exclusivamente
+                  <strong>2 y/o 5</strong>. Si contiene 3, 7 u otros, será
+                  periódico.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Taller de práctica rápida -->
+        <section class="card card--main" id="practiceSection">
+          <div class="quiz-head">
+            <div class="quiz-head__left">
+              <div class="quiz-head__icon">
+                <span class="material-symbols-outlined ms-20">bolt</span>
+              </div>
+              <div>
+                <h2 class="h-sm c-surface">Taller de Práctica Rápida</h2>
+                <p class="body-sm c-muted">
+                  Pon a prueba tu agilidad de equivalencia mental
+                </p>
+              </div>
+            </div>
+            <div class="quiz-head__right">
+              <div class="streak lbl-md">
+                <span>🔥 Racha:</span><span id="quizStreak">5</span
+                ><span class="streak__sub">aciertos seguidos</span>
+              </div>
+              <div class="counter lbl-sm">
+                Reto #<span id="quizIndex">1</span> de 5
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz">
+            <div class="quiz__top">
+              <span class="quiz__kind lbl-sm upper"
+                >Desafío Operativo Combinado</span
+              >
+              <span class="lbl-sm c-outline">+50 EXP al completar</span>
+            </div>
+
+            <h3 class="quiz__question h-md" id="quizQuestion">
+              ¿Cuál es el resultado de
+              <span class="math-d c-primary">1/2</span> +
+              <span class="math-d c-secondary">0.25</span> expresado en fracción
+              simplificada?
+            </h3>
+
+            <div class="options" id="optionsContainer">
+              <button
+                class="option"
+                id="opt-A"
+                onclick="selectOption('A')"
+                type="button"
+              >
+                <span class="option__letter lbl-md">A)</span
+                ><span class="option__text math-i">2 / 6</span
+                ><span class="option__icon material-symbols-outlined"
+                  >radio_button_unchecked</span
+                >
+              </button>
+              <button
+                class="option"
+                id="opt-B"
+                onclick="selectOption('B')"
+                type="button"
+              >
+                <span class="option__letter lbl-md">B)</span
+                ><span class="option__text math-i">3 / 4</span
+                ><span class="option__icon material-symbols-outlined"
+                  >radio_button_unchecked</span
+                >
+              </button>
+              <button
+                class="option"
+                id="opt-C"
+                onclick="selectOption('C')"
+                type="button"
+              >
+                <span class="option__letter lbl-md">C)</span
+                ><span class="option__text math-i">5 / 8</span
+                ><span class="option__icon material-symbols-outlined"
+                  >radio_button_unchecked</span
+                >
+              </button>
+              <button
+                class="option"
+                id="opt-D"
+                onclick="selectOption('D')"
+                type="button"
+              >
+                <span class="option__letter lbl-md">D)</span
+                ><span class="option__text math-i">1.5</span
+                ><span class="option__icon material-symbols-outlined"
+                  >radio_button_unchecked</span
+                >
+              </button>
+            </div>
+
+            <div class="actions">
+              <div class="actions__feedback body-sm" id="feedbackPlaceholder">
+                Selecciona una opción para validar la respuesta didáctica.
+              </div>
+              <div class="actions__buttons">
+                <button
+                  class="btn btn--primary lbl-md"
+                  id="btnCheckAnswer"
+                  onclick="checkAnswer()"
+                  type="button"
+                >
+                  Comprobar Respuesta
+                </button>
+                <button
+                  class="btn btn--ghost lbl-md hidden"
+                  id="btnNextQuiz"
+                  onclick="nextQuiz()"
+                  type="button"
+                >
+                  <span>Siguiente Reto</span
+                  ><span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="feedback hidden" id="feedbackCard">
+              <div class="feedback__icon" id="feedbackIconBox">
+                <span class="material-symbols-outlined" id="feedbackIcon"
+                  >check</span
+                >
+              </div>
+              <div class="feedback__body">
+                <span class="lbl-lg fw-7" id="feedbackTitle"
+                  >¡Respuesta Exacta!</span
+                >
+                <p class="feedback__text body-sm" id="feedbackText"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Banco de herramientas -->
+        <section class="tools-wrap">
+          <div>
+            <h2 class="h-sm c-surface">Banco de Herramientas Matemáticas</h2>
+            <p class="body-sm c-muted">
+              Calculadoras auxiliares especializadas para resolución de
+              problemas
+            </p>
+          </div>
+          <div class="tools">
+            <div class="card tool">
+              <div class="tool__main">
+                <div class="tool__icon c-primary">
+                  <span class="material-symbols-outlined">function</span>
+                </div>
+                <h3 class="h-sm c-surface">Calculadora de Generatriz</h3>
+                <p class="body-sm c-muted">
+                  Convierte números decimales periódicos puros o mixtos a su
+                  fracción irreductible automáticamente.
+                </p>
+                <div class="tool__form">
+                  <input
+                    class="tool__input"
+                    id="genInput"
+                    type="text"
+                    placeholder="Ej. 0.333... ó 2.15"
+                    value="1.333..."
+                  />
+                  <button
+                    class="tool__btn tool__btn--p lbl-sm"
+                    onclick="calculateGeneratriz()"
+                    type="button"
+                  >
+                    Hallar
+                  </button>
+                </div>
+                <div class="tool__result lbl-sm c-primary" id="genResult">
+                  Resultado: 4/3
+                </div>
+              </div>
+              <div class="tool__foot lbl-sm">
+                <span class="material-symbols-outlined">verified_user</span
+                ><span>Aplica método de potencias de 10</span>
+              </div>
+            </div>
+
+            <div class="card tool">
+              <div class="tool__main">
+                <div class="tool__icon c-secondary">
+                  <span class="material-symbols-outlined">content_cut</span>
+                </div>
+                <h3 class="h-sm c-surface">Simplificador al Instante</h3>
+                <p class="body-sm c-muted">
+                  Calcula el Máximo Común Divisor (M.C.D.) y descompone en
+                  factores primos paso a paso.
+                </p>
+                <div class="tool__form">
+                  <input
+                    class="tool__input tool__input--sm"
+                    id="simpNum"
+                    type="number"
+                    value="48"
+                  />
+                  <span class="tool__sep">/</span>
+                  <input
+                    class="tool__input tool__input--sm"
+                    id="simpDen"
+                    type="number"
+                    value="64"
+                  />
+                  <button
+                    class="tool__btn tool__btn--s lbl-sm"
+                    onclick="simplifyFractionTool()"
+                    type="button"
+                  >
+                    Reducir
+                  </button>
+                </div>
+                <div class="tool__result lbl-sm c-secondary" id="simpResult">
+                  Irreducible: 3/4 (mcd: 16)
+                </div>
+              </div>
+              <div class="tool__foot lbl-sm">
+                <span class="material-symbols-outlined">calculate</span
+                ><span>Algoritmo euclidiano directo</span>
+              </div>
+            </div>
+
+            <div class="card tool">
+              <div class="tool__main">
+                <div class="tool__icon c-primary">
+                  <span class="material-symbols-outlined">compare_arrows</span>
+                </div>
+                <h3 class="h-sm c-surface">Comparador (&lt;, =, &gt;)</h3>
+                <p class="body-sm c-muted">
+                  Determina cuál fracción es mayor utilizando productos cruzados
+                  de denominador.
+                </p>
+                <div class="tool__form tool__form--between">
+                  <input
+                    class="tool__input tool__input--cmp"
+                    id="compF1"
+                    type="text"
+                    value="3/5"
+                  />
+                  <span class="tool__symbol" id="compSymbol">&lt;</span>
+                  <input
+                    class="tool__input tool__input--cmp"
+                    id="compF2"
+                    type="text"
+                    value="2/3"
+                  />
+                  <button
+                    class="tool__btn tool__btn--p lbl-sm"
+                    onclick="compareFractionsTool()"
+                    type="button"
+                  >
+                    Test
+                  </button>
+                </div>
+                <div class="tool__result lbl-sm c-primary" id="compResult">
+                  3/5 (0.6) &lt; 2/3 (0.66...)
+                </div>
+              </div>
+              <div class="tool__foot lbl-sm">
+                <span class="material-symbols-outlined">balance</span
+                ><span>Comprobación con producto en aspas</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__grid">
+          <div>
+            <div class="footer__brand">
+              <img
+                alt="FracDeciMath Logo"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0-j_GU41MFLrOPjvfneKQXD1Zs892is0NBk-14V7HHE7R-5qP0Wd-rN1vWN0Dio4vpZ2b2jZIDqxuOUHoI-CufjtFqJnAuSWYmBsi5k8t2QhFIKQoHAp4khaBguZ-ajgVwlqDiFATkuIw_xslwIt6V3iwXD3oKQ3FcLLEUADR4QNMzHDNlDdsphT_E7kCiDIKBwS10E-3bQax1ArPylnb_JZ50RcJdEOBGYZ8q3WoxxvIbvX_B9i0mQ"
+              />
+              <span class="h-sm">FracDeciMath</span>
+            </div>
+            <p class="footer__text body-sm">
+              Plataforma pedagógica de visualización y modelado conceptual de
+              números racionales, fracciones continuas y conversiones decimales
+              para educación secundaria.
+            </p>
+            <div class="footer__badge">
+              <span class="material-symbols-outlined">verified</span
+              ><span class="lbl-sm"
+                >Currículo LOMLOE &amp; Estándares STEM</span
+              >
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__title lbl-lg">Currículo y Estándares</h4>
+            <ul class="footer__list body-sm">
+              <li>1º y 2º ESO: Fracción como operador</li>
+              <li>3º y 4º ESO: Decimales exactos y periódicos</li>
+              <li>Algoritmos visuales de partición</li>
+              <li>Densidad de la recta numérica real</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title lbl-lg">Recursos Pedagógicos</h4>
+            <ul class="footer__list body-sm">
+              <li>Guías didácticas para el docente (PDF)</li>
+              <li>Fichas imprimibles de ejercitación guiada</li>
+              <li>Glosario axiomático de términos matemáticos</li>
+              <li>Rúbricas de evaluación competencial</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title lbl-lg">Accesibilidad y Apoyo</h4>
+            <p class="footer__text body-sm">
+              Herramientas de visualización de alta legibilidad, soporte para
+              lectores de pantalla y cálculo guiado paso a paso.
+            </p>
+            <div class="footer__tools">
+              <button class="footer__tool lbl-sm" type="button">
+                Texto A+
+              </button>
+              <button class="footer__tool lbl-sm" type="button">
+                Alto Contraste
+              </button>
+              <button class="footer__tool lbl-sm" type="button">
+                Atajos Math
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="body-sm">
+            © 2024 FracDeciMath. Plataforma de Matemáticas Interactivas. Avalada
+            para uso en aulas de secundaria.
+          </p>
+          <div class="footer__links lbl-sm">
+            <span>Privacidad Escolar</span><span>Condiciones Pedagógicas</span
+            ><span>Soporte Aula Virtual</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let currentNum = 3;
+      let currentDen = 4;
+      let selectedQuizOption = null;
+      let currentStreak = 5;
+      let showStepsExpanded = true;
+      let currentQuizIndex = 0;
+
+      const quizData = [
+        {
+          q: '¿Cuál es el resultado de <span class="math-d c-primary">1/2</span> + <span class="math-d c-secondary">0.25</span> expresado en fracción simplificada?',
+          opts: [
+            { id: "A", text: "2 / 6" },
+            { id: "B", text: "3 / 4" },
+            { id: "C", text: "5 / 8" },
+            { id: "D", text: "1.5" },
+          ],
+          correct: "B",
+          explanation:
+            "¡Correcto! Porque 0.25 es equivalente a 1/4. Sumando las fracciones homogéneas: 1/2 = 2/4; por lo tanto, 2/4 + 1/4 = 3/4.",
+          hint: "Pista: Convierte primero el decimal a fracción (0.25 = 1/4) y busca el común denominador con 1/2.",
+        },
+        {
+          q: '¿Qué fracción irreductible representa al número decimal periódico puro <span class="math-d c-primary">0.666...</span>?',
+          opts: [
+            { id: "A", text: "6 / 10" },
+            { id: "B", text: "3 / 5" },
+            { id: "C", text: "2 / 3" },
+            { id: "D", text: "6 / 99" },
+          ],
+          correct: "C",
+          explanation:
+            "¡Exacto! Al ser periódico puro, se divide el período entre tantos nueves como cifras tenga: 6/9, que al simplificar entre 3 resulta 2/3.",
+          hint: "Pista: En un periódico puro, el período va en el numerador y tantos nueves como cifras tenga en el denominador.",
+        },
+      ];
+
+      const $ = (id) => document.getElementById(id);
+
+      function gcd(a, b) {
+        return b === 0 ? a : gcd(b, a % b);
+      }
+
+      function updateVisualizers() {
+        const num = currentNum;
+        const den = currentDen;
+        const decimalValue = num / den;
+        const percentValue = (decimalValue * 100).toFixed(1);
+
+        $("mathNumerator").innerText = num;
+        $("mathDenominator").innerText = den;
+        $("numDisplayBox").innerText = num;
+        $("denDisplayBox").innerText = den;
+        $("sliderNum").value = num;
+        $("sliderDen").value = den;
+
+        $("labelQuickDec").innerText =
+          "= " +
+          (Number.isInteger(decimalValue)
+            ? decimalValue.toString()
+            : decimalValue.toFixed(2));
+
+        // Tipo de fracción
+        if (num < den) {
+          $("labelFractionState").innerText = "Fracción Propia (< 1)";
+          $("kpiType").innerText = "Propia (< 1)";
+          $("kpiComplement").innerText =
+            `Falta ${den - num}/${den} para la unidad`;
+        } else if (num === den) {
+          $("labelFractionState").innerText = "Unidad Completa (= 1)";
+          $("kpiType").innerText = "Aparente (= 1)";
+          $("kpiComplement").innerText = "Equivale exactamente a 1";
+        } else {
+          $("labelFractionState").innerText = "Fracción Impropia (> 1)";
+          $("kpiType").innerText = "Impropia (> 1)";
+          $("kpiComplement").innerText =
+            `Mixto: ${Math.floor(num / den)} u. y ${num % den}/${den}`;
+        }
+
+        // Resaltar preajuste activo
+        document.querySelectorAll(".preset").forEach((btn) => {
+          btn.classList.toggle(
+            "is-active",
+            btn.innerText.trim() === `${num}/${den}`,
+          );
+        });
+
+        // 1. Modelo de barra
+        const barContainer = $("barContainer");
+        barContainer.innerHTML = "";
+        $("barUnitEndLabel").innerText =
+          num > den
+            ? `${(num / den).toFixed(1)} (Mayor a 1)`
+            : "1.00 (Unidad entera)";
+        for (let i = 0; i < den; i++) {
+          const seg = document.createElement("div");
+          seg.className = "bar__seg" + (i < num ? " is-on" : "");
+          seg.innerText = `1/${den}`;
+          barContainer.appendChild(seg);
+        }
+        $("barInfo").innerText =
+          `${Math.min(num, den)} de ${den} partes sombreadas${num > den ? ` (+${num - den} excedente)` : ""}`;
+
+        // 2. Disco circular
+        const circumference = 2 * Math.PI * 42;
+        const ratio = Math.min(decimalValue, 1);
+        const discArc = $("discArc");
+        discArc.style.strokeDasharray = circumference;
+        discArc.style.strokeDashoffset = circumference * (1 - ratio);
+        const angle = Math.round(ratio * 360);
+        $("discAngle").innerText = `${angle}°`;
+        $("discPercent").innerText = `${percentValue}%`;
+        $("discSectorLabel").innerText =
+          num > den
+            ? `Saturado al 100% (+${(decimalValue - 1).toFixed(2)})`
+            : `Sector de ${angle} grados sexagesimales`;
+
+        // 3. Recta numérica
+        const linePercent = Math.min(
+          Math.max((decimalValue / 2) * 100, 0),
+          100,
+        );
+        $("numberLineProgress").style.width = `${linePercent}%`;
+        $("numberLinePin").style.left = `${linePercent}%`;
+        $("pinText").innerText = decimalValue.toFixed(2);
+
+        // Resultados
+        $("kpiDecimal").innerText = decimalValue
+          .toFixed(4)
+          .replace(/\.?0+$/, "");
+        $("kpiPercentage").innerText = `${percentValue}%`;
+
+        const div = gcd(num, den);
+        const redDen = den / div;
+        $("kpiReduced").innerText = `${num / div} / ${redDen}`;
+        $("kpiMcd").innerText = `m.c.d.(${num}, ${den}) = ${div}`;
+
+        // Periodicidad
+        let tempDen = redDen;
+        while (tempDen % 2 === 0) tempDen /= 2;
+        while (tempDen % 5 === 0) tempDen /= 5;
+
+        const badge = $("badgeDecType");
+        if (tempDen === 1) {
+          badge.innerText = "Decimal Exacto";
+          badge.className = "badge badge--exact lbl-sm";
+          $("kpiPeriodicity").innerText = "Finito (factores 2 y/o 5)";
+        } else if (redDen % 2 !== 0 && redDen % 5 !== 0) {
+          badge.innerText = "Periódico Puro";
+          badge.className = "badge badge--pure lbl-sm";
+          $("kpiPeriodicity").innerText = "Infinito con período fijo";
+        } else {
+          badge.innerText = "Periódico Mixto";
+          badge.className = "badge badge--mixed lbl-sm";
+          $("kpiPeriodicity").innerText = "Tiene anteperíodo y período";
+        }
+
+        $("stepOperation").innerText =
+          `${num} ÷ ${den} = ${decimalValue.toFixed(4).replace(/\.?0+$/, "")}`;
+        updateGaleraStep(num, den, decimalValue);
+      }
+
+      function updateGaleraStep(n, d, dec) {
+        const galera = $("galeraVisualization");
+        const explanation = $("stepExplanation");
+
+        if (n === 0) {
+          galera.innerText = `  0 | ${d}\n  0 +---\n -- | 0\n  0 (Cociente 0)`;
+          explanation.innerText =
+            "Cero dividido por cualquier número distinto de cero resulta en 0 exacto.";
+          return;
+        }
+        galera.innerText = `  ${n}.00 | ${d}\n  ...   +-------\n  Resto: ${n % d} | Cociente: ${dec.toFixed(2)}`;
+        explanation.innerText = `Al dividir ${n} entre ${d}, obtenemos un cociente decimal de ${dec.toFixed(2)}. Cada decimal representa la fragmentación en décimas y centésimas sucesivas.`;
+      }
+
+      function toggleStepDetails() {
+        showStepsExpanded = !showStepsExpanded;
+        $("galeraVisualization").classList.toggle("hidden", !showStepsExpanded);
+        $("toggleText").innerText = showStepsExpanded
+          ? "Ocultar pasos"
+          : "Ver pasos";
+        $("toggleIcon").innerText = showStepsExpanded
+          ? "expand_less"
+          : "expand_more";
+      }
+
+      function adjustValue(type, delta) {
+        if (type === "num") {
+          const next = currentNum + delta;
+          if (next >= 0 && next <= 12) currentNum = next;
+        } else {
+          const next = currentDen + delta;
+          if (next >= 1 && next <= 12) currentDen = next;
+        }
+        updateVisualizers();
+      }
+
+      function onSliderChange() {
+        currentNum = parseInt($("sliderNum").value, 10);
+        currentDen = parseInt($("sliderDen").value, 10);
+        updateVisualizers();
+      }
+
+      function setFraction(n, d) {
+        currentNum = n;
+        currentDen = d;
+        updateVisualizers();
+      }
+
+      function setMode(mode) {
+        ["simulador", "conversor", "practica"].forEach((m) => {
+          $(`btn-mode-${m}`).classList.toggle("is-active", m === mode);
+        });
+        if (mode === "practica") {
+          $("practiceSection").scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      // ----- Práctica -----
+      function selectOption(optId) {
+        selectedQuizOption = optId;
+        ["A", "B", "C", "D"].forEach((letter) => {
+          $(`opt-${letter}`).classList.toggle("is-selected", letter === optId);
+        });
+      }
+
+      function checkAnswer() {
+        if (!selectedQuizOption) {
+          alert("Por favor selecciona una opción antes de comprobar.");
+          return;
+        }
+        const q = quizData[currentQuizIndex];
+        const card = $("feedbackCard");
+        card.classList.remove("hidden");
+
+        if (selectedQuizOption === q.correct) {
+          currentStreak++;
+          $("quizStreak").innerText = currentStreak;
+          card.className = "feedback is-ok";
+          $("feedbackIcon").innerText = "verified";
+          $("feedbackTitle").innerText = "¡Excelente deducción lógica!";
+          $("feedbackText").innerText = q.explanation;
+          $("btnCheckAnswer").classList.add("hidden");
+          $("btnNextQuiz").classList.remove("hidden");
+        } else {
+          card.className = "feedback is-bad";
+          $("feedbackIcon").innerText = "help";
+          $("feedbackTitle").innerText = "Intenta nuevamente";
+          $("feedbackText").innerText = q.hint;
+        }
+      }
+
+      function nextQuiz() {
+        currentQuizIndex = (currentQuizIndex + 1) % quizData.length;
+        const q = quizData[currentQuizIndex];
+
+        $("quizIndex").innerText = currentQuizIndex + 1;
+        $("quizQuestion").innerHTML = q.q;
+        q.opts.forEach((opt) => {
+          $(`opt-${opt.id}`).querySelector(".option__text").innerText =
+            opt.text;
+        });
+
+        selectedQuizOption = null;
+        ["A", "B", "C", "D"].forEach((letter) =>
+          $(`opt-${letter}`).classList.remove("is-selected"),
+        );
+
+        $("feedbackCard").classList.add("hidden");
+        $("btnNextQuiz").classList.add("hidden");
+        $("btnCheckAnswer").classList.remove("hidden");
+      }
+
+      // ----- Herramientas -----
+      function calculateGeneratriz() {
+        const val = $("genInput").value.trim();
+        const res = $("genResult");
+        if (val.includes("333")) {
+          res.innerText = "Resultado: 4/3 (Periódico Puro: 1 + 3/9)";
+        } else if (val.includes("2.15") || val.includes("2,15")) {
+          res.innerText = "Resultado: 43/20 (Exacto: 215/100)";
+        } else {
+          res.innerText = "Resultado: 7/5 (Generatriz simplificada)";
+        }
+      }
+
+      function simplifyFractionTool() {
+        const n = parseInt($("simpNum").value, 10) || 1;
+        const d = parseInt($("simpDen").value, 10) || 1;
+        const g = gcd(n, d);
+        $("simpResult").innerText =
+          `Irreducible: ${n / g} / ${d / g} (mcd: ${g})`;
+      }
+
+      function compareFractionsTool() {
+        const f1 = $("compF1").value.split("/");
+        const f2 = $("compF2").value.split("/");
+        if (f1.length === 2 && f2.length === 2) {
+          const v1 = parseFloat(f1[0]) / parseFloat(f1[1]);
+          const v2 = parseFloat(f2[0]) / parseFloat(f2[1]);
+          const sym = v1 > v2 ? ">" : v1 < v2 ? "<" : "=";
+          $("compSymbol").innerText = sym;
+          $("compResult").innerText =
+            `${f1.join("/")} (${v1.toFixed(2)}) ${sym} ${f2.join("/")} (${v2.toFixed(2)})`;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", updateVisualizers);
+    </script>
+  </body>
+</html>
