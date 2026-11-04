@@ -105,41 +105,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--sobre-sup-var);
 }
 
-/* ===== CABECERA ===== */
-.cabecera { position: fixed; top: 0; left: 0; width: 100%; z-index: 50; background: rgba(249,249,255,.9); backdrop-filter: blur(20px); box-shadow: 0 1px 8px rgba(0,0,0,.04); }
-.cabecera-interior { height: 5rem; max-width: 1280px; margin: 0 auto; padding: 0 var(--margen-m); display: flex; align-items: center; justify-content: space-between; gap: var(--md); }
-@media (min-width: 1024px) { .cabecera-interior { padding: 0 var(--margen); } }
-.cabecera-izquierda { display: flex; align-items: center; gap: var(--lg); }
-.enlace-logo { display: flex; align-items: center; gap: var(--sm); }
-.texto-logo { display: flex; flex-direction: column; }
-.titulo-logo { font-size: 18px; font-weight: 600; line-height: 1; color: var(--primario); letter-spacing: -0.01em; }
-.subtitulo-logo { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: .02em; color: var(--sobre-sup-var); }
-.insignia-cabecera { display: none; align-items: center; gap: var(--xs); background: var(--sup-cont); padding: var(--xs) var(--sm); border-radius: var(--r-full); }
-@media (min-width: 1280px) { .insignia-cabecera { display: flex; } }
-.insignia-cabecera .material-symbols-outlined { color: var(--secundario); font-size: 16px; }
-.insignia-cabecera span:last-child { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .02em; color: var(--sobre-sup-var); }
-.buscador-cabecera { display: none; flex: 1; max-width: 20rem; }
-@media (min-width: 1024px) { .buscador-cabecera { display: flex; } }
-@media (min-width: 1280px) { .buscador-cabecera { max-width: 24rem; } }
-.caja-buscador { width: 100%; display: flex; align-items: center; background: var(--sup-baja); padding: .375rem var(--md); border-radius: var(--r-lg); color: var(--sobre-sup-var); transition: all .2s; }
-.caja-buscador:focus-within { background: var(--sup-blanca); color: var(--sobre-sup); }
-.caja-buscador .material-symbols-outlined { color: var(--contorno); margin-right: var(--sm); font-size: 18px; }
-.caja-buscador input { width: 100%; background: transparent; border: none; outline: none; font-size: 14px; color: var(--sobre-sup); }
-.caja-buscador input::placeholder { color: var(--contorno); }
-.navegacion-cabecera { display: none; align-items: center; gap: .25rem; background: var(--sup-baja); padding: .375rem; border-radius: var(--r-xl); }
-@media (min-width: 768px) { .navegacion-cabecera { display: flex; } }
-.enlace-navegacion { padding: .375rem var(--md); border-radius: var(--r-lg); font-size: 14px; color: var(--sobre-sup-var); white-space: nowrap; transition: all .2s; }
-.enlace-navegacion:hover { background: var(--sup-alta); color: var(--sobre-sup); }
-.enlace-navegacion.activo { background: var(--primario-cont); color: #fff; font-weight: 600; box-shadow: 0 2px 8px -2px rgba(79,70,229,.3); }
-.cabecera-derecha { display: flex; align-items: center; gap: var(--sm); }
-.insignia-puntos { display: flex; align-items: center; gap: .375rem; background: var(--terciario-fijo); color: #2a1700; padding: .375rem var(--sm); border-radius: var(--r-full); }
-.texto-puntos { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: -0.01em; }
-.informacion-perfil { display: flex; align-items: center; gap: var(--sm); padding-left: .25rem; }
-.texto-perfil { display: none; flex-direction: column; }
-@media (min-width: 640px) { .texto-perfil { display: flex; } }
-.nombre-perfil { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: var(--sobre-sup); }
-.rol-perfil { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .02em; color: var(--contorno); }
-
 /* ===== PRINCIPAL ===== */
 .principal { width: 100%; padding-top: 5rem; background: var(--sup); min-height: calc(100vh - 14rem); }
 
@@ -333,3 +298,5 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (min-width: 640px) { .parte-inferior-pie { flex-direction: row; text-align: left; } }
 .copyright-pie { font-size: 14px; color: var(--contorno); }
 .enlaces-pie { display: flex; gap: var(--md); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--contorno); }
+.enlaces-pie a { color: inherit; text-decoration: none; }
+.enlaces-pie a:hover { color: var(--primario); }

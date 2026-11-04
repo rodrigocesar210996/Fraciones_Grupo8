@@ -1,72 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Lecciones Teóricas | FracDeciMath</title>
+    <link rel="stylesheet" href="css/leccion.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/layouts.css">
+    <link rel="stylesheet" href="css/base.css">
 </head>
-<body>
+<body data-page="leccion-operaciones">
     <!-- ENCABEZADO PRINCIPAL -->
-<header class="encabezado">
-
-    <!-- LOGO Y NOMBRE -->
-    <a href="#inicio" class="marca">
-        <div class="logo">
-            <span>▦</span>
-        </div>
-        <div class="marca-texto">
-            <h1>FracDeciMath</h1>
-            <p>Lab Virtual</p>
-        </div>
-    </a>
-    <!-- NIVEL EDUCATIVO -->
-    <div class="nivel">
-        <span class="icono-graduacion">♧</span>
-        <div>
-            <strong>Secundaria:</strong>
-            <p>1° a 4° ESO / Ciclo Medio</p>
-        </div>
-    </div>
-
-    <!-- BUSCADOR -->
-    <button class="buscador" aria-label="Buscar">
-        <span>⌕</span>
-    </button>
-     <!-- MENÚ DE NAVEGACIÓN -->
-    <nav class="menu">
-        <a href="#inicio">Inicio</a>
-        <a href="#lecciones">Lecciones Teóricas</a>
-        <a href="#laboratorio">Laboratorio Interactivo</a>
-        <a href="#retos">Retos y Evaluación</a>
-        <a href="#contacto">Contacto y Tutoría</a>
-    </nav>
-
-    <!-- PUNTOS -->
-    <div class="puntos">
-        <span class="libro">🔥</span>
-        <div>
-            <strong>340</strong>
-            <span>pts</span>
-        </div>
-    </div>
-
-    <!-- PERFIL DEL DOCENTE -->
-    <div class="perfil">
-        <div class="avatar">MV</div>
-        <div class="perfil-texto">
-            <strong>Prof. Marcos V.</strong>
-            <span>Docente Asignado</span>
-        </div>
-    </div>
-
-</header>
+<div data-layout="header"></div>
 
 <!-- RUTA DE NAVEGACIÓN -->
 <div class="ruta">
-    <a href="#inicio">Inicio</a>
+    <a href="inicio.html">Inicio</a>
     <span>›</span>
-    <a href="#lecciones">Lecciones Teóricas</a>
+    <a href="leccion-operaciones.html" aria-current="page">Lecciones Teóricas</a>
     <span>›</span>
     <a href="#fracciones">Fracciones y Decimales</a>
     <span>›</span>
@@ -93,15 +45,21 @@
             </header>
 
             <!-- VIDEO -->
-            <section class="video-seccion">
+            <section class="video-seccion" id="video">
                 <div class="seccion-cabecera">
                     <span>▣ Video-Clase Magistral</span>
                     <span class="etiqueta-clara">Explicación guiada en pizarra virtual</span>
                 </div>
 
                 <div class="video">
-                    <!-- Puedes colocar aquí un iframe de YouTube -->
-                    <div class="video-mensaje"></div>
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/ABvlDnmc8iw"
+                        title="Clase magistral de fracciones y decimales"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
                 </div>
 
                 <div class="marcas-tiempo">
@@ -293,7 +251,7 @@
                 <a class="indice-activo" href="#video">1. Video Masterclass & Tiempos <span>⊙</span></a>
                 <a href="#regla">2. Regla de Oro Universal <span>⊙</span></a>
                 <a href="#resolucion">3. Ejemplo Guiado en 3 Pasos <span>▤</span></a>
-                <a href="#laboratorio">4. Tabla de Fracciones Generatrices <span>▤</span></a>
+                <a href="laboratorio-interactivo.html">4. Tabla de Fracciones Generatrices <span>▤</span></a>
                 <a href="#errores">5. Alerta de Errores Comunes <span>⚠</span></a>
             </section>
 
@@ -323,7 +281,7 @@
                     <div class="mini-avatar">MV</div>
                     <p>
                         ¿Tienes dudas con este tema?
-                        <a href="#contacto">Contactar con Prof. Marcos</a>
+                        <a href="contacto-tutoria.html">Contactar con Prof. Marcos</a>
                     </p>
                 </div>
             </section>
@@ -370,61 +328,10 @@
             </p>
         </div>
     </section>
-<script>
-        function cambiarMetodo(metodo) {
-            const botones = document.querySelectorAll(".metodo");
-            const titulo = document.getElementById("metodo-titulo");
-            const formula = document.getElementById("formula");
+    <div data-layout="footer"></div>
 
-            botones.forEach(boton => boton.classList.remove("activo"));
-            botones[metodo - 1].classList.add("activo");
+    <script src="js/leccion-operaciones.js"></script>
 
-            if (metodo === 1) {
-                titulo.textContent = "Calcular con orden riguroso:";
-                formula.textContent = "(3/4 + 1/2) × (2/5 − 6/5)";
-            } else {
-                titulo.textContent = "Calcular usando números decimales:";
-                formula.textContent = "(0.75 + 0.5) × (0.4 − 1.2)";
-            }
-        }
-
-        const control = document.getElementById("fraccion");
-
-        control.addEventListener("input", function () {
-            const valor = Number(this.value) / 4;
-            document.getElementById("valor-fraccion").textContent =
-                valor.toFixed(2);
-
-            document.getElementById("valor-decimal").textContent =
-                valor.toFixed(2);
-
-            document.getElementById("barra-progreso").style.width =
-                ((Number(this.value) + 10) / 20 * 100) + "%";
-        });
-
-        function calcular() {
-            const a = Number(document.getElementById("numero-a").value);
-            const b = Number(document.getElementById("numero-b").value);
-            const operacion = document.getElementById("operacion").value;
-            let resultado;
-
-            if (operacion === "+") resultado = a + b;
-            if (operacion === "-") resultado = a - b;
-            if (operacion === "*") resultado = a * b;
-
-            if (operacion === "/") {
-                if (b === 0) {
-                    document.getElementById("resultado").textContent =
-                        "No se puede dividir entre cero.";
-                    return;
-                }
-                resultado = a / b;
-            }
-
-            document.getElementById("resultado").textContent =
-                "Resultado: " + resultado;
-        }
-    </script>
-
+    <script src="js/layout.js"></script>
 </body>
 </html>

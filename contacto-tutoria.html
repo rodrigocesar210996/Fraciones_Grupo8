@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>FracDeciMath — Contacto y Tutoría</title>
+
+<!-- Fuentes -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<!-- Estilos propios -->
+
+<!-- Tailwind (CDN) + configuración -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed-variant":"#004e5c","on-primary-fixed-variant":"#3323cc","secondary":"#00687a","surface-container-low":"#f0f3ff","on-secondary-container":"#006172","surface-bright":"#f9f9ff","primary":"#3525cd","on-secondary-fixed":"#001f26","on-primary-container":"#dad7ff","on-error":"#ffffff","surface":"#f9f9ff","surface-tint":"#4d44e3","inverse-primary":"#c3c0ff","on-primary":"#ffffff","surface-dim":"#cfdaf2","inverse-surface":"#263143","error":"#ba1a1a","surface-container-highest":"#d8e3fb","primary-container":"#4f46e5","outline":"#777587","on-tertiary-fixed":"#2a1700","inverse-on-surface":"#ecf1ff","surface-container":"#e7eeff","surface-variant":"#d8e3fb","tertiary-fixed":"#ffddb8","secondary-fixed-dim":"#4cd7f6","tertiary-container":"#885500","on-background":"#111c2d","secondary-container":"#57dffe","tertiary":"#684000","surface-container-high":"#dee8ff","on-error-container":"#93000a","primary-fixed":"#e2dfff","primary-fixed-dim":"#c3c0ff","on-tertiary":"#ffffff","tertiary-fixed-dim":"#ffb95f","error-container":"#ffdad6","on-surface":"#111c2d","on-primary-fixed":"#0f0069","outline-variant":"#c7c4d8","on-secondary":"#ffffff","on-surface-variant":"#464555","on-tertiary-fixed-variant":"#653e00","background":"#f9f9ff","on-tertiary-container":"#ffd4a4","secondary-fixed":"#acedff","surface-container-lowest":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","margin":"2rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-mobile":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"math-display":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"label-sm":["JetBrains Mono"],"label-md":["JetBrains Mono"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"math-inline":["JetBrains Mono"]},"fontSize":{"headline-md":["22px",{"lineHeight":"28px","fontWeight":"700"}],"math-display":["24px",{"lineHeight":"36px","fontWeight":"600"}],"label-lg":["16px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["14px",{"lineHeight":"18px","fontWeight":"500"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"800"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"math-inline":["16px",{"lineHeight":"24px","fontWeight":"500"}]}}}};
+</script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layouts.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body data-page="contacto-tutoria" class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+
+<!-- ======================= HEADER ======================= -->
+<div data-layout="header"></div>
+
+<!-- ======================= MAIN ======================= -->
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-14rem)]">
+<div class="flex flex-col w-full">
+
+  <!-- Page Header -->
+  <section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-high/60 via-surface to-surface pb-space-xl pt-space-lg">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-space-lg">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-space-xs bg-primary-fixed text-on-primary-fixed px-space-md py-1 rounded-full mb-space-md">
+            <span class="material-symbols-outlined text-base">support_agent</span>
+            <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Tutoría Activa</span>
+          </div>
+          <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-space-sm">
+            ¿Tienes dudas con un ejercicio o necesitas material para clase?
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Conéctate con nuestro equipo docente de secundaria o descarga fichas de trabajo adaptadas al currículo oficial.
+          </p>
+        </div>
+
+        <!-- Quick Status Card -->
+        <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex items-center gap-space-md min-w-[280px]">
+          <div class="relative flex items-center justify-center w-12 h-12 rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+            <span class="material-symbols-outlined text-2xl">timer</span>
+            <span class="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span>
+          </div>
+          <div>
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Tiempo de Respuesta</span>
+            <p class="font-headline-sm text-headline-sm text-on-surface">&lt; 24 horas laborables</p>
+            <span class="font-body-sm text-body-sm text-secondary font-medium">9 docentes activos hoy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario + Panel docente -->
+  <section class="w-full pb-space-xl">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+
+        <!-- Columna izquierda: formulario (7 cols) -->
+        <div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-md">
+          <div class="flex items-center justify-between mb-space-lg pb-space-sm border-b-0">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Módulo de Asistencia</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">Consulta Pedagógica Guiada</h2>
+            </div>
+            <div class="hidden sm:flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full text-on-surface-variant">
+              <span class="material-symbols-outlined text-sm">lock</span>
+              <span class="font-label-sm text-label-sm">Entorno Escolar Seguro</span>
+            </div>
+          </div>
+
+          <form class="space-y-space-lg" id="math-query-form" onsubmit="event.preventDefault(); showSuccessToast();">
+
+            <!-- Selector de rol -->
+            <div>
+              <label class="block font-label-md text-label-md text-on-surface mb-space-xs font-semibold">¿Quién realiza la consulta?</label>
+              <div class="grid grid-cols-2 gap-space-sm bg-surface-container-low p-1.5 rounded-lg">
+                <button class="py-2.5 px-space-md rounded-md font-body-sm text-body-sm font-semibold transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-space-xs" id="role-student" onclick="setRole('student')" type="button">
+                  <span class="material-symbols-outlined text-base">face</span>
+                  <span>Soy Estudiante de Secundaria</span>
+                </button>
+                <button class="py-2.5 px-space-md rounded-md font-body-sm text-body-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center gap-space-xs" id="role-teacher" onclick="setRole('teacher')" type="button">
+                  <span class="material-symbols-outlined text-base">person</span>
+                  <span>Soy Docente / Padre o Madre</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Curso y tema -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-space-xs font-semibold">Curso / Nivel Escolar</label>
+                <div class="relative">
+                  <select class="w-full h-12 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all">
+                    <option value="1eso">1º de ESO (12-13 años)</option>
+                    <option value="2eso">2º de ESO (13-14 años)</option>
+                    <option selected="" value="3eso">3º de ESO (14-15 años)</option>
+                    <option value="4eso">4º de ESO (15-16 años - Opción Académica/Aplicada)</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-space-md top-3 pointer-events-none text-outline">expand_more</span>
+                </div>
+              </div>
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-space-xs font-semibold">Tema de la consulta</label>
+                <div class="relative">
+                  <select class="w-full h-12 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-space-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all">
+                    <option value="generatriz">Dudas con fracción generatriz</option>
+                    <option value="combinadas">Operaciones combinadas con paréntesis</option>
+                    <option value="problemas">Problemas de aplicación contextual</option>
+                    <option value="otro">Otro contenido del temario</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-space-md top-3 pointer-events-none text-outline">tune</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Descripción + atajos matemáticos -->
+            <div>
+              <div class="flex items-center justify-between mb-space-xs">
+                <label class="font-label-md text-label-md text-on-surface font-semibold">Describe tu duda o en qué paso te has bloqueado</label>
+                <span class="font-label-sm text-label-sm text-outline">Formatos Math admitidos</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-space-xs mb-space-xs bg-surface-container-low p-space-xs rounded-lg">
+                <span class="font-label-sm text-label-sm text-on-surface-variant px-space-xs">Insertar:</span>
+                <button class="px-space-sm py-1 bg-surface-container-lowest text-primary font-math-inline text-math-inline rounded hover:bg-primary hover:text-on-primary transition-colors shadow-sm" onclick="insertSnippet('\\frac{a}{b}')" type="button">a/b</button>
+                <button class="px-space-sm py-1 bg-surface-container-lowest text-primary font-math-inline text-math-inline rounded hover:bg-primary hover:text-on-primary transition-colors shadow-sm" onclick="insertSnippet('0.\\bar{3}')" type="button">0.3̂</button>
+                <button class="px-space-sm py-1 bg-surface-container-lowest text-primary font-math-inline text-math-inline rounded hover:bg-primary hover:text-on-primary transition-colors shadow-sm" onclick="insertSnippet('\\sqrt{x}')" type="button">√x</button>
+                <button class="px-space-sm py-1 bg-surface-container-lowest text-primary font-math-inline text-math-inline rounded hover:bg-primary hover:text-on-primary transition-colors shadow-sm" onclick="insertSnippet(' \\cdot 10^n ')" type="button">·10ⁿ</button>
+                <button class="px-space-sm py-1 bg-surface-container-lowest text-primary font-math-inline text-math-inline rounded hover:bg-primary hover:text-on-primary transition-colors shadow-sm" onclick="insertSnippet('( ) / ( )')" type="button">(···)</button>
+              </div>
+              <textarea class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md p-space-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all resize-y" id="query-textarea" placeholder="Ejemplo: No entiendo cómo restar los periodos al hallar la fracción de 1,2333... ¿Tengo que multiplicar por 100 o por 10 primero?" required="" rows="4"></textarea>
+            </div>
+
+            <!-- Subida de foto -->
+            <div>
+              <label class="block font-label-md text-label-md text-on-surface mb-space-xs font-semibold">Adjuntar foto del ejercicio resuelto en el cuaderno</label>
+              <div class="relative group bg-surface-container-low hover:bg-surface-container-high rounded-xl p-space-lg text-center transition-all cursor-pointer">
+                <input accept="image/*,.pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onchange="handleFileSelected(this)" type="file"/>
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-12 h-12 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform shadow-sm">
+                    <span class="material-symbols-outlined text-2xl">photo_camera</span>
+                  </div>
+                  <p class="font-headline-sm text-headline-sm text-on-surface mb-1" id="upload-headline">Arrastra aquí una foto o haz clic para subir</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Recomendado: Captura nítida de tu procedimiento con lápiz o boli (JPG, PNG o PDF hasta 10 MB)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Envío -->
+            <div class="pt-space-xs">
+              <button class="w-full h-14 bg-primary-container text-on-primary font-headline-sm text-headline-sm rounded-lg hover:opacity-95 active:scale-[0.99] transition-all shadow-md flex items-center justify-center gap-space-sm" type="submit">
+                <span class="material-symbols-outlined text-2xl">send</span>
+                <span>Enviar duda a los profesores tutores (Respuesta en &lt; 24h)</span>
+              </button>
+              <p class="text-center font-label-sm text-label-sm text-outline mt-space-sm flex items-center justify-center gap-space-xs">
+                <span class="material-symbols-outlined text-sm text-secondary">verified_user</span>
+                Tutoría personalizada gratuita vinculada al programa de refuerzo escolar.
+              </p>
+            </div>
+          </form>
+
+          <!-- Toast (oculto por defecto) -->
+          <div class="hidden mt-space-md p-space-md rounded-lg bg-surface-container-highest text-on-surface flex items-center gap-space-sm transition-all" id="query-toast">
+            <span class="material-symbols-outlined text-secondary text-2xl">task_alt</span>
+            <div>
+              <p class="font-headline-sm text-headline-sm">¡Duda recibida con éxito!</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Hemos asignado tu consulta a la Prof. Laura Morales. Recibirás la explicación paso a paso en tu correo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha: docente y soporte (5 cols) -->
+        <div class="lg:col-span-5 space-y-space-lg">
+
+          <!-- Perfil docente -->
+          <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-md">
+            <div class="bg-gradient-to-r from-primary to-surface-tint p-space-md text-on-primary">
+              <span class="font-label-sm text-label-sm uppercase font-bold tracking-wider opacity-90">Docente Titular Asignada</span>
+              <p class="font-headline-sm text-headline-sm text-on-primary">Coordinación de Didáctica</p>
+            </div>
+            <div class="p-space-lg">
+              <div class="flex items-start gap-space-md mb-space-md">
+                <img alt="Prof. Laura Morales" class="w-24 h-24 rounded-2xl object-cover shadow-md shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRI7sH-GrYXQzLE_pmRHWJtfmW9iHSILXXLuca_d_qrCBjkYMwgrC0tZBtaIC0iAJXrj6vFLXBe65NEes81WfPlSMuVvpEUJ-TcDw9Ojs0wRq3Lq1lD1TK6u2d8hu7ySIa5HffbakeF_LBg6H9kQHqxLuC6O8irByelr-zvGXCmUaYSnahN9E09lwp11boLPlJsBCwkY0Z-oFjd1aaXQX_7Uk7MPn8Jo-8PaY1GlvpUNvQXprif5STTQ"/>
+                <div>
+                  <h3 class="font-headline-md text-headline-md text-on-surface leading-snug">Prof. Laura Morales</h3>
+                  <p class="font-body-sm text-body-sm text-secondary font-medium">Coordinadora de Matemáticas de Secundaria</p>
+                  <div class="flex items-center gap-space-xs text-outline mt-1 font-label-sm text-label-sm">
+                    <span class="material-symbols-outlined text-sm">workspace_premium</span>
+                    <span>15 años de experiencia docente</span>
+                  </div>
+                </div>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low p-space-md rounded-lg mb-space-md">
+                "Mi meta es desmontar el mito de que las matemáticas son un obstáculo. Todo decimal infinito y toda fracción complicada tiene una representación visual intuitiva esperando ser descubierta."
+              </p>
+              <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+                <span class="flex items-center gap-1">
+                  <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                  Docente conectada
+                </span>
+                <span class="text-outline">Horario central: 16:00 - 19:30 CET</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tutorías en vivo -->
+          <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md">
+            <div class="flex items-center gap-space-sm mb-space-md">
+              <div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">video_camera_front</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Tutorías Online en Vivo</h3>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Conexión por Google Meet / Zoom</span>
+              </div>
+            </div>
+            <div class="space-y-space-sm mb-space-md">
+              <div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+                <div>
+                  <span class="font-label-md text-label-md text-on-surface font-semibold block">Martes: 1º y 2º de ESO</span>
+                  <span class="font-body-sm text-body-sm text-outline">Operaciones básicas, jerarquía y MCD/mcm</span>
+                </div>
+                <span class="font-label-md text-label-md text-primary font-bold bg-primary-fixed px-space-sm py-1 rounded">17:00 CET</span>
+              </div>
+              <div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+                <div>
+                  <span class="font-label-md text-label-md text-on-surface font-semibold block">Jueves: 3º y 4º de ESO</span>
+                  <span class="font-body-sm text-body-sm text-outline">Fracción generatriz, potencias y álgebra</span>
+                </div>
+                <span class="font-label-md text-label-md text-primary font-bold bg-primary-fixed px-space-sm py-1 rounded">18:00 CET</span>
+              </div>
+            </div>
+            <a class="w-full py-2.5 bg-surface-container-high text-on-surface font-headline-sm text-headline-sm rounded-lg hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-space-xs" href="#" onclick="event.preventDefault(); alert('Enlace de sesión enviado al calendario del alumno.');">
+              <span class="material-symbols-outlined text-base">calendar_add_on</span>
+              <span>Añadir a mi calendario escolar</span>
+            </a>
+          </div>
+
+          <!-- Comunidad -->
+          <div class="bg-surface-container rounded-xl p-space-lg shadow-sm">
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Comunidad de Ayuda Mutua</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Resuelve ejercicios con otros compañeros de secundaria moderados por docentes voluntarios.</p>
+            <div class="grid grid-cols-2 gap-space-sm">
+              <a class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-all text-on-surface group" href="#" onclick="event.preventDefault();">
+                <span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">send</span>
+                <div>
+                  <span class="font-label-md text-label-md font-semibold block">Telegram</span>
+                  <span class="font-label-sm text-label-sm text-outline">Canal @FracDudas</span>
+                </div>
+              </a>
+              <a class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-all text-on-surface group" href="#" onclick="event.preventDefault();">
+                <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">forum</span>
+                <div>
+                  <span class="font-label-md text-label-md font-semibold block">Discord</span>
+                  <span class="font-label-sm text-label-sm text-outline">Servidor MathHub</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repositorio de recursos -->
+  <section class="w-full bg-surface-container-low py-space-xl">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+        <div>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Fichas • Ejercicios • Imprimibles</span>
+          <h2 class="font-headline-xl text-headline-xl text-on-surface">Repositorio de Recursos Didácticos</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mt-1">Materiales con licencia abierta para el aula y estudio autónomo. Con soluciones paso a paso.</p>
+        </div>
+        <div class="flex items-center gap-space-xs">
+          <span class="font-label-md text-label-md text-on-surface-variant bg-surface-container-lowest px-space-md py-2 rounded-lg shadow-sm flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-base">picture_as_pdf</span>
+            4 fichas listas en PDF
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+
+        <!-- Ficha 1 -->
+        <div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-primary-fixed text-primary flex items-center justify-center mb-space-md group-hover:scale-105 transition-transform">
+              <span class="material-symbols-outlined text-2xl">pie_chart</span>
+            </div>
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">1º y 2º ESO</span>
+              <span class="text-outline font-label-sm text-label-sm">PDF • 2.4 MB</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs leading-snug">Guía visual de fracciones y decimales en la vida cotidiana</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">Ejemplos con recetas de cocina, descuentos comerciales y repartos de terreno mediante cuadrículas coloreables.</p>
+          </div>
+          <button class="w-full py-2.5 bg-surface-container-low text-primary hover:bg-primary hover:text-on-primary font-headline-sm text-headline-sm rounded-lg transition-colors flex items-center justify-center gap-space-xs" onclick="downloadAsset('Guia_Visual_Fracciones.pdf')" type="button">
+            <span class="material-symbols-outlined text-base">download</span>
+            <span>Descargar Ficha</span>
+          </button>
+        </div>
+
+        <!-- Ficha 2 -->
+        <div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-space-md group-hover:scale-105 transition-transform">
+              <span class="material-symbols-outlined text-2xl">calculate</span>
+            </div>
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">2º y 3º ESO</span>
+              <span class="text-outline font-label-sm text-label-sm">PDF • 4.1 MB</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs leading-snug">100 Ejercicios de operaciones combinadas resueltos</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">Batería progresiva con corchetes, potencias fraccionarias y conversión previa de periódicos a fracciones.</p>
+          </div>
+          <button class="w-full py-2.5 bg-surface-container-low text-primary hover:bg-primary hover:text-on-primary font-headline-sm text-headline-sm rounded-lg transition-colors flex items-center justify-center gap-space-xs" onclick="downloadAsset('100_Operaciones_Combinadas.pdf')" type="button">
+            <span class="material-symbols-outlined text-base">download</span>
+            <span>Descargar Ficha</span>
+          </button>
+        </div>
+
+        <!-- Ficha 3 -->
+        <div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-space-md group-hover:scale-105 transition-transform">
+              <span class="material-symbols-outlined text-2xl">extension</span>
+            </div>
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">Todos los cursos</span>
+              <span class="text-outline font-label-sm text-label-sm">PDF • 1.8 MB</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs leading-snug">Juegos de mesa y recortables: dominó fraccionario</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">28 fichas recortables de dominó donde se empareja el decimal, la fracción irreductible y el diagrama de tarta.</p>
+          </div>
+          <button class="w-full py-2.5 bg-surface-container-low text-primary hover:bg-primary hover:text-on-primary font-headline-sm text-headline-sm rounded-lg transition-colors flex items-center justify-center gap-space-xs" onclick="downloadAsset('Domino_Fracciones_Recortable.pdf')" type="button">
+            <span class="material-symbols-outlined text-base">download</span>
+            <span>Descargar Ficha</span>
+          </button>
+        </div>
+
+        <!-- Ficha 4 -->
+        <div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center mb-space-md group-hover:scale-105 transition-transform">
+              <span class="material-symbols-outlined text-2xl">fact_check</span>
+            </div>
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">Evaluación</span>
+              <span class="text-outline font-label-sm text-label-sm">PDF • 850 KB</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs leading-snug">Rúbrica de autoevaluación para estudiantes de ESO</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">Checklist competencial para que el alumno audite si domina simplificación, ordenación en la recta y estimación.</p>
+          </div>
+          <button class="w-full py-2.5 bg-surface-container-low text-primary hover:bg-primary hover:text-on-primary font-headline-sm text-headline-sm rounded-lg transition-colors flex items-center justify-center gap-space-xs" onclick="downloadAsset('Rubrica_Autoevaluacion_ESO.pdf')" type="button">
+            <span class="material-symbols-outlined text-base">download</span>
+            <span>Descargar Ficha</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="w-full py-space-xl">
+    <div class="max-w-[840px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="text-center mb-space-xl">
+        <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Respuestas Inmediatas</span>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Preguntas Frecuentes y Paradojas Matemáticas</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mt-space-xs">Aclaramos los conceptos que más generan confusión en los exámenes de secundaria.</p>
+      </div>
+
+      <div class="space-y-space-sm" id="faq-accordion">
+
+        <!-- FAQ 1 -->
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full p-space-md lg:p-space-lg text-left flex items-center justify-between gap-space-md focus:outline-none" onclick="toggleFaq('faq-1')" type="button">
+            <span class="font-headline-sm text-headline-sm text-on-surface">¿Por qué 0.999... es exactamente igual a 1?</span>
+            <span class="material-symbols-outlined text-outline transition-transform duration-200" id="faq-icon-1">expand_more</span>
+          </button>
+          <div class="hidden px-space-md lg:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md space-y-space-sm" id="faq-content-1">
+            <p>Aunque parece contraintuitivo, es una igualdad matemática exacta. Existen varias demostraciones accesibles para secundaria:</p>
+            <div class="bg-surface-container-low p-space-md rounded-lg font-math-inline text-math-inline text-on-surface space-y-1">
+              <p>1. Sea <span class="font-bold">x = 0.999...</span></p>
+              <p>2. Multiplicamos por 10: <span class="font-bold">10x = 9.999...</span></p>
+              <p>3. Restamos la primera ecuación: <span class="font-bold">10x - x = 9.999... - 0.999...</span></p>
+              <p>4. Resulta: <span class="font-bold">9x = 9 ⇒ x = 9/9 = 1</span></p>
+            </div>
+            <p class="font-body-sm text-body-sm text-outline">Además, entre dos números reales distintos siempre debe existir otro número intermedio. No es posible colocar ningún número entre 0.999... y 1, por lo que representan el mismo punto en la recta real.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full p-space-md lg:p-space-lg text-left flex items-center justify-between gap-space-md focus:outline-none" onclick="toggleFaq('faq-2')" type="button">
+            <span class="font-headline-sm text-headline-sm text-on-surface">¿Cómo sé si un decimal infinito se puede convertir en fracción?</span>
+            <span class="material-symbols-outlined text-outline transition-transform duration-200" id="faq-icon-2">expand_more</span>
+          </button>
+          <div class="hidden px-space-md lg:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md space-y-space-sm" id="faq-content-2">
+            <p>Depende de si las cifras decimales siguen un patrón repetitivo (periódico) o no:</p>
+            <ul class="list-disc pl-5 space-y-1 font-body-sm text-body-sm">
+              <li><strong class="text-on-surface">Sí se puede (Número Racional ℚ):</strong> Si es un decimal exacto (ej. 0.25) o periódico puro/mixto (ej. 0.333... o 1.4555...). Toda repetición periódica tiene fracción generatriz.</li>
+              <li><strong class="text-on-surface">No se puede (Número Irracional 𝕀):</strong> Si tiene infinitas cifras decimales sin repetición periódica regular, como π (3.14159...) o √2 (1.41421...). Estos no pueden escribirse como el cociente de dos números enteros.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full p-space-md lg:p-space-lg text-left flex items-center justify-between gap-space-md focus:outline-none" onclick="toggleFaq('faq-3')" type="button">
+            <span class="font-headline-sm text-headline-sm text-on-surface">¿Puedo usar esta plataforma en la pizarra digital de mi aula?</span>
+            <span class="material-symbols-outlined text-outline transition-transform duration-200" id="faq-icon-3">expand_more</span>
+          </button>
+          <div class="hidden px-space-md lg:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md space-y-space-sm" id="faq-content-3">
+            <p>¡Absolutamente! Toda la plataforma está optimizada para pantallas táctiles interactivas (Promethean, SMART Board, ViewSonic) y proyectores HDMI.</p>
+            <p class="font-body-sm text-body-sm text-outline">Recomendamos activar el modo "Pantalla Completa" (tecla F11) en el navegador del centro. Los deslizadores de fracciones y tiras numéricas admiten hasta 2 toques simultáneos para que dos alumnos participen juntos en la pizarra.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts de interacción -->
+  <script>
+    function setRole(role) {
+      const studentBtn = document.getElementById('role-student');
+      const teacherBtn = document.getElementById('role-teacher');
+
+      if (role === 'student') {
+        studentBtn.className = "py-2.5 px-space-md rounded-md font-body-sm text-body-sm font-semibold transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-space-xs";
+        teacherBtn.className = "py-2.5 px-space-md rounded-md font-body-sm text-body-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center gap-space-xs";
+      } else {
+        teacherBtn.className = "py-2.5 px-space-md rounded-md font-body-sm text-body-sm font-semibold transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-space-xs";
+        studentBtn.className = "py-2.5 px-space-md rounded-md font-body-sm text-body-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center gap-space-xs";
+      }
+    }
+
+    function insertSnippet(code) {
+      const textarea = document.getElementById('query-textarea');
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const text = textarea.value;
+      textarea.value = text.substring(0, start) + code + text.substring(end);
+      textarea.focus();
+      textarea.selectionStart = textarea.selectionEnd = start + code.length;
+    }
+
+    function handleFileSelected(input) {
+      if (input.files && input.files[0]) {
+        const headline = document.getElementById('upload-headline');
+        headline.textContent = 'Archivo adjunto: ' + input.files[0].name;
+        headline.classList.add('text-secondary');
+      }
+    }
+
+    function showSuccessToast() {
+      const toast = document.getElementById('query-toast');
+      toast.classList.remove('hidden');
+      toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      document.getElementById('math-query-form').reset();
+      document.getElementById('upload-headline').textContent = 'Arrastra aquí una foto o haz clic para subir';
+      document.getElementById('upload-headline').classList.remove('text-secondary');
+    }
+
+    function downloadAsset(filename) {
+      alert('Descargando recurso didáctico: ' + filename + '\nIncluye guía de soluciones paso a paso.');
+    }
+
+    function toggleFaq(id) {
+      const content = document.getElementById(id.replace('faq-', 'faq-content-'));
+      const icon = document.getElementById(id.replace('faq-', 'faq-icon-'));
+      const isOpen = !content.classList.contains('hidden');
+
+      if (isOpen) {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+  </script>
+
+</div>
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<div data-layout="footer"></div>
+
+    <script src="js/layout.js"></script>
+</body>
+</html>

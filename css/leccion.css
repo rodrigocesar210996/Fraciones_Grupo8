@@ -239,6 +239,69 @@ body {
     font-size: 13px;
 }
 
+.footer-estandar {
+    margin-top: 3rem;
+    padding: 2rem 7%;
+    background: #f0f2ff;
+    color: #535468;
+    border-top: 1px solid #e9eaf5;
+}
+
+.footer-estandar__contenido,
+.footer-estandar__inferior {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-estandar__contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-estandar__contenido strong {
+    color: #4038f5;
+    font-size: 1.2rem;
+}
+
+.footer-estandar__contenido p {
+    max-width: 32rem;
+    margin: .5rem 0 0;
+}
+
+.footer-estandar__contenido nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem 1rem;
+    margin: 0;
+}
+
+.footer-estandar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-estandar a:hover {
+    color: #4338f5;
+}
+
+.footer-estandar__inferior {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #dfe2f0;
+    font-size: .85rem;
+}
+
+@media (max-width: 700px) {
+    .footer-estandar__contenido,
+    .footer-estandar__inferior {
+        flex-direction: column;
+    }
+}
+
 /* ===== ADAPTACIÓN A TABLETS ===== */
 @media (max-width: 1200px) {
     .encabezado {

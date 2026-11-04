@@ -1,0 +1,30 @@
+/* ==========================================================
+   FracDeciMath — Contacto y Tutoría
+   Estilos propios (los utilitarios de Tailwind se siguen
+   cargando por CDN desde el HTML)
+   ========================================================== */
+
+/* Base */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+/* Sin márgenes extra en el primer/último bloque del <main> */
+main > :first-child {
+  margin-top: 0 !important;
+}
+
+main > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Ocultar barra de desplazamiento (WebKit) */
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1429,6 +1429,15 @@ input:focus {
   justify-content: center;
 }
 
+.footer__links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  color: var(--primary);
+}
+
 /* ---------- Responsive ---------- */
 @media (min-width: 640px) {
   .user__text {
