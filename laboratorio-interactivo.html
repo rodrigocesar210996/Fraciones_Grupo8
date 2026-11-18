@@ -31,14 +31,13 @@
           <div>
             <div class="eyebrow lbl-sm upper">
               <span class="material-symbols-outlined">science</span>
-              <span>Entorno de Simulación Aritmética Dinámica</span>
+              <span>Explora · Comprueba · Aprende</span>
             </div>
             <h1 class="page-title h-lg">
-              Laboratorio Interactivo de Fracciones y Decimales
+              Laboratorio de fracciones y decimales
             </h1>
             <p class="page-lead">
-              Experimenta visualmente manipulando el numerador, el denominador y
-              observa su representación decimal en tiempo real.
+              Ajusta una fracción y observa cómo cambia su valor.
             </p>
           </div>
           <div class="modes" id="modeSelector">
@@ -49,16 +48,7 @@
               type="button"
             >
               <span class="material-symbols-outlined ms-16">tune</span
-              ><span>Simulador Visual</span>
-            </button>
-            <button
-              class="mode lbl-md"
-              id="btn-mode-conversor"
-              onclick="setMode('conversor')"
-              type="button"
-            >
-              <span class="material-symbols-outlined ms-16">swap_horiz</span
-              ><span>Conversor Interactivo</span>
+              ><span>Explorar fracción</span>
             </button>
             <button
               class="mode lbl-md"
@@ -67,7 +57,7 @@
               type="button"
             >
               <span class="material-symbols-outlined ms-16">quiz</span
-              ><span>Práctica Guiada</span>
+              ><span>Reto rápido</span>
             </button>
           </div>
         </div>
@@ -123,7 +113,7 @@
                 <div class="stepper__top">
                   <label class="stepper__label lbl-md" for="sliderNum"
                     ><span class="dot dot--p"></span
-                    ><span>Numerador (Partes tomadas)</span></label
+                    ><span>Numerador</span></label
                   >
                   <div class="stepper__ctrl">
                     <button
@@ -167,7 +157,7 @@
                 <div class="stepper__top">
                   <label class="stepper__label lbl-md" for="sliderDen"
                     ><span class="dot dot--s"></span
-                    ><span>Denominador (Partes totales)</span></label
+                    ><span>Denominador</span></label
                   >
                   <div class="stepper__ctrl">
                     <button
@@ -379,7 +369,7 @@
                   <span class="galera__title lbl-md"
                     ><span class="material-symbols-outlined"
                       >format_list_numbered</span
-                    ><span>Algoritmo de División Larga (Galera)</span></span
+                    ><span>División paso a paso</span></span
                   >
                   <button
                     class="link-btn lbl-sm"
@@ -402,23 +392,6 @@
               </div>
             </div>
 
-            <div class="tip">
-              <div class="tip__icon">
-                <span class="material-symbols-outlined ms-20">psychology</span>
-              </div>
-              <div class="tip__body">
-                <span class="lbl-md c-surface fw-6"
-                  >Clave de Razonamiento LOMLOE</span
-                >
-                <p class="tip__text body-sm">
-                  Un número racional genera un
-                  <strong>decimal exacto</strong> únicamente si los factores
-                  primos del denominador simplificado son exclusivamente
-                  <strong>2 y/o 5</strong>. Si contiene 3, 7 u otros, será
-                  periódico.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -554,8 +527,8 @@
           </div>
         </section>
 
-        <!-- Banco de herramientas -->
-        <section class="tools-wrap">
+        <details class="tools-wrap">
+          <summary>Más herramientas para practicar</summary>
           <div>
             <h2 class="h-sm c-surface">Banco de Herramientas Matemáticas</h2>
             <p class="body-sm c-muted">
@@ -684,7 +657,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </details>
       </div>
     </main>
 

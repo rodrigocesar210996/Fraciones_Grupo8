@@ -46,6 +46,13 @@ let currentNum = 3;
         const decimalValue = num / den;
         const percentValue = (decimalValue * 100).toFixed(1);
 
+        ["kpiDecimal", "kpiPercentage", "kpiReduced", "kpiType"].forEach((id) => {
+          const element = $(id);
+          element.classList.remove("is-updated");
+          void element.offsetWidth;
+          element.classList.add("is-updated");
+        });
+
         $("mathNumerator").innerText = num;
         $("mathDenominator").innerText = den;
         $("numDisplayBox").innerText = num;
@@ -208,7 +215,7 @@ let currentNum = 3;
       }
 
       function setMode(mode) {
-        ["simulador", "conversor", "practica"].forEach((m) => {
+        ["simulador", "practica"].forEach((m) => {
           $(`btn-mode-${m}`).classList.toggle("is-active", m === mode);
         });
         if (mode === "practica") {

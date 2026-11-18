@@ -1,30 +1,294 @@
-/* ==========================================================
-   FracDeciMath — Contacto y Tutoría
-   Estilos propios (los utilitarios de Tailwind se siguen
-   cargando por CDN desde el HTML)
-   ========================================================== */
+:root {
+  --contact-night: #10152b;
+  --contact-ink: #17213d;
+  --contact-muted: #64728b;
+  --contact-line: #e3e9f4;
+  --contact-paper: #fff;
+  --contact-lime: #d7ff63;
+  --contact-blue: #7c8cff;
+  --contact-coral: #ff6b7a;
+  --contact-teal: #32d5c7;
+  --contact-canvas: #f5f7ff;
+}
 
-/* Base */
-html,
+* { box-sizing: border-box; }
+
 body {
-  margin: 0;
-  padding: 0;
+  color: var(--contact-ink) !important;
+  background:
+    linear-gradient(rgba(124,140,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,140,255,.05) 1px, transparent 1px),
+    radial-gradient(circle at 8% 12%, rgba(124,140,255,.18), transparent 22rem),
+    var(--contact-night) !important;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif !important;
 }
 
-body {
-  overscroll-behavior: none;
+main {
+  min-height: auto !important;
+  padding: 0 0 72px !important;
+  background: transparent !important;
 }
 
-/* Sin márgenes extra en el primer/último bloque del <main> */
-main > :first-child {
-  margin-top: 0 !important;
+main > div > section:first-child {
+  padding: 55px 0 72px !important;
+  color: #fff !important;
+  background: transparent !important;
 }
 
-main > :last-child {
-  margin-bottom: 0 !important;
+main > div > section:first-child > div {
+  position: relative;
 }
 
-/* Ocultar barra de desplazamiento (WebKit) */
-::-webkit-scrollbar {
+main > div > section:first-child h1 {
+  max-width: 760px;
+  color: #fff !important;
+  font-size: clamp(2.35rem, 5vw, 4.5rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -.065em;
+  line-height: 1 !important;
+}
+
+main > div > section:first-child p {
+  max-width: 650px;
+  color: rgba(255,255,255,.7) !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+main > div > section:first-child .inline-flex {
+  color: var(--contact-night) !important;
+  background: var(--contact-lime) !important;
+  font-family: "JetBrains Mono", monospace;
+}
+
+main > div > section:first-child > div > div > div:last-child {
+  border: 1px solid rgba(255,255,255,.18);
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
+main > div > section:first-child > div > div > div:last-child p {
+  color: #fff !important;
+  font-size: .95rem !important;
+}
+
+main > div > section:first-child > div > div > div:last-child span:last-child {
+  color: var(--contact-lime) !important;
+}
+
+main > div > section:nth-child(2) {
+  padding: 0 0 46px !important;
+  background: transparent !important;
+}
+
+main > div > section:nth-child(2) > div > div {
+  align-items: stretch;
+}
+
+main > div > section:nth-child(2) > div > div > div:first-child {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--contact-line);
+  border-radius: 24px;
+  background: var(--contact-paper);
+  box-shadow: 0 24px 60px rgba(0,0,0,.24);
+}
+
+main > div > section:nth-child(2) > div > div > div:first-child::before {
+  position: absolute;
+  inset: 0 20% auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--contact-lime), var(--contact-blue), var(--contact-teal));
+  content: "";
+}
+
+main > div > section:nth-child(2) h2 {
+  color: var(--contact-night) !important;
+  font-size: 1.6rem !important;
+  letter-spacing: -.04em;
+}
+
+main > div > section:nth-child(2) label {
+  color: var(--contact-ink) !important;
+}
+
+#role-student,
+#role-teacher {
+  border-radius: 11px !important;
+  transition: .2s ease;
+}
+
+#role-student {
+  color: var(--contact-night) !important;
+  background: var(--contact-lime) !important;
+}
+
+#role-teacher {
+  color: var(--contact-muted) !important;
+  background: #f0f3ff !important;
+}
+
+#role-student:hover,
+#role-teacher:hover {
+  transform: translateY(-2px);
+}
+
+main input:not([type="file"]),
+main select,
+main textarea {
+  border: 1px solid var(--contact-line) !important;
+  color: var(--contact-ink) !important;
+  background: #f8f9ff !important;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+main input:not([type="file"]):focus,
+main select:focus,
+main textarea:focus {
+  border-color: var(--contact-blue) !important;
+  outline: 0 !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 4px rgba(124,140,255,.14) !important;
+}
+
+#query-textarea { min-height: 150px; }
+
+main button {
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease !important;
+}
+
+main button:hover {
+  transform: translateY(-2px);
+}
+
+main > div > section:nth-child(2) button[type="submit"] {
+  color: var(--contact-night) !important;
+  background: var(--contact-lime) !important;
+  box-shadow: 0 10px 24px rgba(16,21,43,.13);
+}
+
+main > div > section:nth-child(2) button[type="submit"]:hover {
+  box-shadow: 0 14px 28px rgba(16,21,43,.2);
+}
+
+main > div > section:nth-child(2) > div > div > div:last-child {
+  display: grid;
+  gap: 14px;
+}
+
+main > div > section:nth-child(2) > div > div > div:last-child > div {
+  border: 1px solid var(--contact-line);
+  border-radius: 19px;
+  background: var(--contact-paper);
+  box-shadow: 0 12px 30px rgba(0,0,0,.14);
+}
+
+main > div > section:nth-child(2) > div > div > div:last-child > div:first-child {
+  border-color: rgba(50,213,199,.35);
+  background: linear-gradient(135deg, #e8fffb, #f8fff0);
+}
+
+main > div > section:nth-child(2) > div > div > div:last-child > div:nth-child(2) {
+  background: var(--contact-night);
+}
+
+main > div > section:nth-child(2) > div > div > div:last-child > div:nth-child(3) {
   display: none;
+}
+
+main > div > section:nth-child(2) > div > div > div:last-child > div:nth-child(2) h3,
+main > div > section:nth-child(2) > div > div > div:last-child > div:nth-child(2) p {
+  color: #fff !important;
+}
+
+main > div > section:nth-child(2) > div > div > div:last-child > div:nth-child(2) p {
+  color: rgba(255,255,255,.65) !important;
+}
+
+main > div > section:nth-child(3) {
+  padding: 64px 0 !important;
+  background: transparent !important;
+}
+
+main > div > section:nth-child(3) h2,
+main > div > section:nth-child(4) h2 {
+  color: #fff !important;
+  font-size: clamp(1.7rem, 3vw, 2.4rem) !important;
+  letter-spacing: -.045em;
+}
+
+main > div > section:nth-child(3) > div > div > div {
+  border: 1px solid var(--contact-line);
+  border-radius: 19px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(43,58,104,.09);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+main > div > section:nth-child(3) > div > div > div:hover {
+  box-shadow: 0 18px 34px rgba(43,58,104,.15);
+  transform: translateY(-5px);
+}
+
+main > div > section:nth-child(3) > div > div:last-child > div:nth-child(n + 3) {
+  display: none;
+}
+
+main > div > section:nth-child(3) button {
+  color: var(--contact-night) !important;
+  background: #eef1ff !important;
+}
+
+main > div > section:nth-child(3) button:hover {
+  color: var(--contact-night) !important;
+  background: var(--contact-lime) !important;
+}
+
+main > div > section:nth-child(4) {
+  padding: 64px 0 !important;
+  background: transparent !important;
+}
+
+main > div > section:nth-child(4) > div > div:last-child > div {
+  border: 1px solid var(--contact-line);
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(43,58,104,.07);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+main > div > section:nth-child(4) > div > div:last-child > div:hover {
+  box-shadow: 0 15px 28px rgba(43,58,104,.12);
+  transform: translateY(-2px);
+}
+
+main > div > section:nth-child(4) button {
+  color: var(--contact-ink) !important;
+}
+
+main > div > section:nth-child(4) button:focus-visible,
+main button:focus-visible,
+main a:focus-visible,
+main select:focus-visible,
+main textarea:focus-visible {
+  outline: 3px solid var(--contact-coral) !important;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .container { width: min(100% - 32px, 620px) !important; }
+  main > div > section:first-child { padding-top: 32px !important; }
+  main > div > section:first-child h1 { font-size: 2.55rem !important; }
+  main > div > section:nth-child(2) > div > div > div:first-child { padding: 22px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
 }

@@ -3,6 +3,7 @@ html {
   min-width: 320px;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,4 +19,49 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+:root {
+  --fd-night: #10152b;
+  --fd-night-deep: #0c1024;
+  --fd-ink: #17213d;
+  --fd-muted: #64728b;
+  --fd-line: #e3e9f4;
+  --fd-paper: #ffffff;
+  --fd-canvas: #f5f7ff;
+  --fd-lime: #d7ff63;
+  --fd-blue: #7c8cff;
+  --fd-blue-deep: #5366db;
+  --fd-coral: #ff6b7a;
+  --fd-teal: #32d5c7;
+  --fd-yellow: #ffd166;
+  --fd-radius-sm: 12px;
+  --fd-radius-md: 18px;
+  --fd-radius-lg: 24px;
+  --fd-shadow-card: 0 18px 45px rgba(43, 58, 104, .1);
+  --fd-shadow-dark: 0 24px 60px rgba(0, 0, 0, .24);
+  --fd-font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --fd-font-mono: "JetBrains Mono", Consolas, monospace;
+}
+
+body {
+  font-family: var(--fd-font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--fd-coral);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--fd-night);
+  background: var(--fd-lime);
 }

@@ -1,198 +1,146 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retos y Evaluación - FracDeciMath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Retos y evaluación | FracDeciMath</title>
     <link rel="stylesheet" href="css/evaluacion.css">
     <link rel="stylesheet" href="css/header.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/layouts.css">
     <link rel="stylesheet" href="css/base.css">
 </head>
 <body data-page="evaluacion">
     <div data-layout="header"></div>
-    <main>
-        <section class="evaluacion-activa">
-            <h2>Evaluación Activa</h2>
-            <p>Modo Examen Supervisado LOMLOE 2024</p>
-            <p>Tiempo restante: 6:08 minutos</p>
-            <p>Bonus de precisión: +50 XP</p>
-        </section>
-        <section class="mapa-cuestionario">
-            <h2>Mapa del Cuestionario</h2>
-            <p>4 / 10 Contestadas</p>
-            <div class="botones-preguntas">
-                <button type="button">1</button>
-                <button type="button">2</button>
-                <button type="button">3</button>
-                <button type="button">4</button>
-                <button type="button">5</button>
+
+    <main class="evaluacion">
+        <header class="evaluacion-hero">
+            <div>
+                <p class="eyebrow">RETO · CNEB · SECUNDARIA</p>
+                <h1>Demuestra lo que sabes</h1>
+                <p class="hero-copy">Resuelve cada situación con calma. Puedes volver a una pregunta antes de enviar.</p>
             </div>
-            <div class="botones-preguntas">
-                <button type="button">6</button>
-                <button type="button">7</button>
-                <button type="button">8</button>
-                <button type="button">9</button>
-                <button type="button">10</button>
+            <div class="estado-evaluacion">
+                <span class="estado-punto"></span>
+                <strong>Evaluación activa</strong>
+                <span>6:08 min</span>
             </div>
-            <p>Hechas | Actual | Pendiente</p>
-        </section>
-        <section class="recordatorio-operativo">
-            <h2>Recordatorio Operativo</h2>
-            <p class="formula-recordatorio">
-                m.c.m.(a, b, c) = Mínimo común múltiplo
-                para homogeneizar sumandos.
-            </p>
-            <p>
-                Al trabajar con magnitudes combinadas
-                (litros, fracciones y decimales),
-                expresa siempre todas las cantidades
-                relativas respecto al volumen total.
-            </p>
-        </section>
-        <section class="racha-aciertos">
-            <h2>¡Racha de Aciertos!</h2>
-            <p>
-                Has resuelto 3 ejercicios consecutivos
-                sin cometer fallos en el primer intento.
-            </p>
-        </section>
-        <section class="banco-pruebas">
-            <h2>Banco de Pruebas Curriculares</h2>
-            <p>
-                Selecciona el formato de evaluación
-                matemática que deseas afrontar hoy.
-            </p>
-            <button type="button">Quiz Rápido (5 preguntas)</button>
-            <button type="button">Evaluación de Unidad (15 preguntas)</button>
-            <button type="button">Contrarreloj (3 minutos)</button>
-        </section>
-        <section class="pregunta-examen">
-            <h2>Pregunta 4 de 10</h2>
-            <p>Competencia: Modelización y Fracción Continua</p>
-            <label for="progreso">Progreso de la evaluación:</label>
-            <progress id="progreso" value="4" max="10">40%</progress>
-            <h3>Problema Verbal Aplicado</h3>
-            <p class="enunciado">
-                Un depósito de agua de reserva contiene
-                3/5 de su capacidad total.
-            </p>
-            <p class="enunciado">
-                En una primera fase de riego se extraen
-                0.25 del volumen total y, posteriormente,
-                se vierten 150 litros que representan
-                exactamente 1/10 de la capacidad del depósito.
-            </p>
-            <h3>¿Qué fracción del depósito queda finalmente llena?</h3>
-            <form class="formulario-respuestas">
-                <fieldset>
-                    <legend>Selecciona la respuesta correcta</legend>
-                    <p>
-                        <input type="radio" id="opcionA" name="respuesta" value="A">
-                        <label for="opcionA">A) 9/20 de la capacidad</label>
-                    </p>
-                    <p>
-                        <input type="radio" id="opcionB" name="respuesta" value="B">
-                        <label for="opcionB">B) 7/20 de la capacidad</label>
-                    </p>
-                    <p>
-                        <input type="radio" id="opcionC" name="respuesta" value="C">
-                        <label for="opcionC">C) 1/2 de la capacidad</label>
-                    </p>
-                    <p>
-                        <input type="radio" id="opcionD" name="respuesta" value="D">
-                        <label for="opcionD">D) 3/10 de la capacidad</label>
-                    </p>
-                </fieldset>
-                <details>
-                    <summary>Pista pedagógica (-10 XP)</summary>
-                    <p>
-                        Convierte los decimales a fracciones
-                        y utiliza un denominador común
-                        para resolver la operación.
-                    </p>
-                </details>
-                <h3>Bloc de notas</h3>
-                <label for="notas">Escribe tus operaciones matemáticas:</label>
-                <p>
-                    <textarea id="notas" name="notas" rows="5" cols="40" placeholder="Realiza tus cálculos aquí..."></textarea>
-                </p>
-                <button type="button">Guardar y Anterior</button>
-                <button type="button">Siguiente Pregunta</button>
-            </form>
-        </section>
+        </header>
+
+        <div class="evaluacion-grid">
+            <section class="pregunta-examen" aria-labelledby="pregunta-titulo">
+                <div class="pregunta-meta">
+                    <span id="pregunta-contador">Pregunta 4 de 10</span>
+                    <span class="competencia">Resuelve problemas de cantidad</span>
+                </div>
+                <div class="progreso-barra" aria-label="40% completado">
+                    <span></span>
+                </div>
+
+                <div class="pregunta-contenido">
+                    <p class="tipo-pregunta">Problema aplicado</p>
+                    <h2 id="pregunta-titulo">¿Qué fracción del depósito queda finalmente llena?</h2>
+                    <div class="enunciado" id="enunciado">
+                        <p>Un depósito contiene <strong>3/5</strong> de su capacidad.</p>
+                        <p>Se extrae <strong>0.25</strong> del volumen total y después se vierten 150 litros, equivalentes a <strong>1/10</strong> de la capacidad.</p>
+                    </div>
+                </div>
+
+                <form class="formulario-respuestas">
+                    <fieldset>
+                        <legend>Elige una respuesta</legend>
+                        <label class="opcion" for="opcionA">
+                            <input type="radio" id="opcionA" name="respuesta" value="A">
+                            <span class="opcion-letra">A</span>
+                            <span>9/20 de la capacidad</span>
+                        </label>
+                        <label class="opcion" for="opcionB">
+                            <input type="radio" id="opcionB" name="respuesta" value="B">
+                            <span class="opcion-letra">B</span>
+                            <span>7/20 de la capacidad</span>
+                        </label>
+                        <label class="opcion" for="opcionC">
+                            <input type="radio" id="opcionC" name="respuesta" value="C">
+                            <span class="opcion-letra">C</span>
+                            <span>1/2 de la capacidad</span>
+                        </label>
+                        <label class="opcion" for="opcionD">
+                            <input type="radio" id="opcionD" name="respuesta" value="D">
+                            <span class="opcion-letra">D</span>
+                            <span>3/10 de la capacidad</span>
+                        </label>
+                    </fieldset>
+
+                    <details class="pista">
+                        <summary>Necesito una pista</summary>
+                        <p>Convierte 0.25 a fracción y usa un denominador común.</p>
+                    </details>
+
+                    <label class="notas-label" for="notas">Mis operaciones <span>opcional</span></label>
+                    <textarea id="notas" name="notas" rows="4" placeholder="Escribe aquí tus cálculos..."></textarea>
+
+                    <div class="acciones">
+                        <button class="boton-secundario" id="anterior" type="button">Anterior</button>
+                        <button class="boton-principal" id="siguiente" type="button">Guardar y continuar <span>→</span></button>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="panel-lateral">
+                <section class="mapa-cuestionario">
+                    <div class="panel-titulo">
+                        <h2>Tu progreso</h2>
+                        <strong>4/10</strong>
+                    </div>
+                    <div class="preguntas">
+                        <button class="hecha" type="button" data-question="1">1</button>
+                        <button class="hecha" type="button" data-question="2">2</button>
+                        <button class="hecha" type="button" data-question="3">3</button>
+                        <button class="actual" type="button" data-question="4" aria-current="step">4</button>
+                        <button type="button" data-question="5">5</button>
+                        <button type="button" data-question="6">6</button>
+                        <button type="button" data-question="7">7</button>
+                        <button type="button" data-question="8">8</button>
+                        <button type="button" data-question="9">9</button>
+                        <button type="button" data-question="10">10</button>
+                    </div>
+                    <p class="leyenda"><span class="hecha"></span>Respondida <span class="actual"></span>Actual</p>
+                </section>
+
+                <section class="recordatorio-operativo">
+                    <p class="eyebrow">RECUERDA</p>
+                    <h2>Convierte antes de operar</h2>
+                    <p>0.25 = 1/4. Luego busca un denominador común.</p>
+                </section>
+
+                <section class="racha-aciertos">
+                    <span class="racha-icono">✦</span>
+                    <div>
+                        <strong>Racha de 3 aciertos</strong>
+                        <p>Vas muy bien. Sigue concentrado.</p>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
         <section class="rendimiento">
-            <h2>Rendimiento por Competencias LOMLOE</h2>
-            <p>
-                Métricas obtenidas a través de
-                las últimas evaluaciones trimestrales.
-            </p>
-            <h3>Distribución de Dominio</h3>
-            <p>Conversión Decimal a Fracción: 95%</p>
-            <progress value="95" max="100">95%</progress>
-            <p>Suma y Resta de Racionales: 85%</p>
-            <progress value="85" max="100">85%</progress>
-            <p>Problemas Verbales: 70%</p>
-            <progress value="70" max="100">70%</progress>
-            <p>Multiplicación y División: 60%</p>
-            <progress value="60" max="100">60%</progress>
-        </section>
-        <section class="tutor-virtual">
-            <h2>Tutor Virtual FracDeciMath</h2>
-            <h3>Diagnóstico Inteligente Asistido</h3>
-            <h4>Alerta Pedagógica de Atención</h4>
-            <p>
-                Tus mayores dudas se concentran
-                en el algoritmo de división
-                fraccionaria inversa.
-            </p>
-            <p>
-                Te recomendamos completar la lección
-                interactiva División Visual y
-                Fracciones Compuestas antes de
-                presentarte a la próxima evaluación.
-            </p>
-            <button type="button">Repasar Lección</button>
-            <button type="button">Posponer</button>
-        </section>
-        <section class="recursos">
-            <h2>Exámenes Modelo y Pautas de Corrección</h2>
-            <p class="recursos-descripcion">
-                Documentos pedagógicos en formato PDF
-                para estudiantes y docentes.
-            </p>
-            <article>
-                <h3>Examen Modelo A: Racionales Básicos</h3>
-                <p>1° y 2° ESO - 8 ejercicios</p>
-                <p>
-                    Incluye ejercicios de fracciones,
-                    operaciones y problemas matemáticos.
-                </p>
-                <button type="button">Descargar</button>
-            </article>
-            <article>
-                <h3>Examen Modelo B: Decimales Periódicos</h3>
-                <p>3° ESO - Nivel avanzado</p>
-                <p>
-                    Fracción generatriz de números
-                    decimales, redondeo y truncamiento.
-                </p>
-                <button type="button">Descargar</button>
-            </article>
-            <article>
-                <h3>Solucionario Oficial Docente</h3>
-                <p>
-                    Desarrollo algebraico completo,
-                    errores frecuentes de alumnos
-                    y justificación teórica.
-                </p>
-                <button type="button">Desbloquear</button>
-            </article>
+            <div>
+                <p class="eyebrow">TU AVANCE</p>
+                <h2>Lo que ya dominas</h2>
+                <p>Revisa tus fortalezas para saber qué practicar después.</p>
+            </div>
+            <div class="dominios">
+                <div><span>Convertir decimales</span><strong>95%</strong><i><b style="width:95%"></b></i></div>
+                <div><span>Sumar y restar</span><strong>85%</strong><i><b style="width:85%"></b></i></div>
+                <div><span>Problemas aplicados</span><strong>70%</strong><i><b style="width:70%"></b></i></div>
+            </div>
         </section>
     </main>
+
     <div data-layout="footer"></div>
+    <script src="js/evaluacion.js"></script>
     <script src="js/layout.js"></script>
 </body>
 </html>

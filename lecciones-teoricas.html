@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Lecciones Teóricas | FracDeciMath</title>
+    <link rel="stylesheet" href="css/leccion.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layouts.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body data-page="leccion-operaciones">
+    <!-- ENCABEZADO PRINCIPAL -->
+<div data-layout="header"></div>
+
+<!-- RUTA DE NAVEGACIÓN -->
+<div class="ruta">
+    <a href="inicio.html">Inicio</a>
+    <span>›</span>
+    <a href="lecciones-teoricas.html" aria-current="page">Lecciones Teóricas</a>
+    <span>›</span>
+    <a href="#resolucion">Fracciones y Decimales</a>
+    <span>›</span>
+    <span class="etiqueta">Secundaria · CNEB</span>
+</div>
+ <main class="pagina">
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <section class="contenido">
+
+            <!-- TITULO -->
+            <header class="titulo-leccion">
+                <div class="subtitulo">UNIDAD 03 · COMPETENCIA: RESUELVE PROBLEMAS DE CANTIDAD</div>
+
+                <h1>
+                    Operaciones con fracciones y decimales
+                </h1>
+                 <div class="datos-leccion">
+                    <span>◷ 25 min</span>
+                    <span>◆ Nivel intermedio</span>
+                    <span>◆ Secundaria</span>
+                </div>
+            </header>
+
+            <!-- VIDEO -->
+            <section class="video-seccion" id="video">
+                <div class="seccion-cabecera">
+                    <span>VIDEO · EXPLICACIÓN GUIADA</span>
+                    <span class="etiqueta-clara">Mira, pausa y vuelve a intentar</span>
+                </div>
+
+                <div class="video">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/ABvlDnmc8iw"
+                        title="Clase magistral de fracciones y decimales"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </section>
+            <section class="regla" id="regla">
+                <div class="escudo">♧</div>
+
+                <div>
+                    <div class="regla-etiqueta">
+                        IDEA CLAVE
+                    </div>
+
+                    <h3>Convierte los decimales antes de operar</h3>
+
+                    <p>
+                        Así puedes trabajar con valores exactos y evitar errores de redondeo.
+                    </p>
+                </div>
+            </section>
+
+            <!-- RESOLUCIÓN GUIADA -->
+            <section class="resolucion" id="resolucion">
+                <div class="resolucion-titulo">
+                    <span>DEMOSTRACIÓN PEDAGÓGICA GUIADA</span>
+                    <h2>Aprende con un ejemplo</h2>
+                </div>
+
+                <div class="metodos">
+                    <button class="metodo activo" onclick="cambiarMetodo(1)">
+                        Método 1:<br>Fracciones (Exacto)
+                    </button>
+
+                    <button class="metodo" onclick="cambiarMetodo(2)">
+                        Método 2: Decimales<br>(Aproximado)
+                    </button>
+                </div>
+            </section>
+
+ <section class="workspace">
+    <section>
+      <header class="top-header">
+        <div class="problem-label">Problema<br>resuelto</div>
+        <p class="header-copy" id="metodo-titulo">Calcular con orden riguroso:</p>
+        <div class="equation" id="formula">
+          <span class="fraction"><span>3</span><span>4</span></span>
+          + 0.5 ·
+          <span class="fraction"><span>2</span><span>5</span></span>
+          − 1.2
+        </div>
+      </header>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step-number">1</span>
+          <div class="step-content">
+            <div class="step-heading">
+              <h2>Conversión de decimales a fracciones irreducibles</h2>
+              <span class="tag blue-tag">Fracciones generatrices</span>
+            </div>
+            <p>Identificamos los términos decimales en la expresión y calculamos su fracción canónica irreducible:</p>
+            <div class="examples">
+              <div class="example">0.5 = <strong><span class="fraction"><span>5</span><span>10</span></span> = <span class="fraction"><span>1</span><span>2</span></span></strong></div>
+              <div class="example">1.2 = <strong><span class="fraction"><span>12</span><span>10</span></span> = <span class="fraction"><span>6</span><span>5</span></span></strong></div>
+            </div>
+            <div class="note">↳ Reescribimos la expresión con fracciones equivalentes.</div>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step-number">2</span>
+          <div class="step-content">
+            <div class="step-heading">
+              <h2>Aplicar jerarquía: multiplicación de términos</h2>
+              <span class="tag orange-tag">Prioridad: PEMDAS / BODMAS</span>
+            </div>
+            <p>Resolvemos el producto interno antes de cualquier suma o resta, simplificando factores idénticos si es posible:</p>
+            <div class="operation">
+              <span class="operation-label">Operación:</span>
+              <div class="math-line"><span class="fraction"><span>1</span><span>2</span></span> · <span class="fraction"><span>2</span><span>5</span></span></div>
+              <span class="arrow">→ Simplificación →</span>
+              <div class="math-line">
+                <span class="fraction"><span>1 · 2</span><span>2 · 5</span></span>
+                =
+                <span class="fraction"><span>2</span><span>10</span></span>
+                =
+                <span class="fraction"><span>1</span><span>5</span></span>
+              </div>
+            </div>
+            <div class="note">Ahora solo quedan sumas y restas de fracciones.</div>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step-number">3</span>
+          <div class="step-content">
+            <div class="step-heading">
+              <h2>Reducción a común denominador y resultado final</h2>
+              <span class="tag purple-tag">m.c.m. (4, 5) = 20</span>
+            </div>
+            <p>El mínimo común múltiplo de los denominadores 4 y 5 es 20. Homogeneizamos todas las fracciones:</p>
+            <div class="calculation">
+              <div class="small-equation">
+                <span class="fraction"><span>3</span><span>4</span></span> +
+                <span class="fraction"><span>1</span><span>5</span></span> −
+                <span class="fraction"><span>6</span><span>5</span></span>
+                <span>Homogeneizado</span>
+              </div>
+              <div class="final-equation">
+                <span class="fraction"><span>15 + 4 − 24</span><span>20</span></span>
+                =
+                <span class="fraction"><span>−5</span><span>20</span></span>
+                = −<span class="fraction"><span>1</span><span>4</span></span>
+              </div>
+            </div>
+            <div class="result">
+              <div class="result-icon">✓</div>
+              <div>
+                <strong>Resultado canónico irreducible</strong>
+                <p>−<span class="fraction"><span>1</span><span>4</span></span> o en decimal exacto: <b>−0.25</b></p>
+                <span class="result-pill">Valor racional exacto</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </section>
+        </section>
+
+        <aside class="practica-lateral">
+          <section class="laboratorio" id="laboratorio">
+        <h2>Laboratorio Interactivo</h2>
+        <p>Comprueba tu resultado con una operación sencilla.</p>
+
+        <div class="laboratorio-caja">
+            <label for="numero-a">Primer número</label>
+            <input type="number" id="numero-a" value="0.75" step="0.25">
+
+            <label for="operacion">Operación</label>
+            <select id="operacion">
+                <option value="+">Sumar (+)</option>
+                <option value="-">Restar (−)</option>
+                <option value="*">Multiplicar (×)</option>
+                <option value="/">Dividir (÷)</option>
+            </select>
+
+            <label for="numero-b">Segundo número</label>
+            <input type="number" id="numero-b" value="0.5" step="0.25">
+
+            <button onclick="calcular()">Comprobar resultado</button>
+
+            <p class="resultado" id="resultado">
+                Tu resultado aparecerá aquí.
+            </p>
+        </div>
+          </section>
+        </aside>
+    </main>
+
+    <div data-layout="footer"></div>
+
+    <script src="js/leccion-operaciones.js"></script>
+
+    <script src="js/layout.js"></script>
+</body>
+</html>

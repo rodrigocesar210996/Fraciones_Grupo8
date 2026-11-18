@@ -1,9 +1,9 @@
 .footer-layout {
   margin-top: 2.5rem;
-  padding: 2.5rem 2rem 1rem;
-  color: #464555;
-  background: #f0f3ff;
-  border-top: 1px solid #d8e3fb;
+  padding: 4.5rem max(2rem, calc((100% - 1180px) / 2)) 1.25rem;
+  color: rgba(255,255,255,.58);
+  background: var(--fd-night-deep, #0c1024);
+  border-top: 1px solid rgba(124,140,255,.22);
 }
 
 .footer-layout__grid,
@@ -22,18 +22,19 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #3525cd;
+  color: #d7ff63;
   text-decoration: none;
 }
 
 .footer-layout__brand img {
   width: auto;
   height: 1.5rem;
+  border-radius: 7px;
 }
 
 .footer-layout h2 {
   margin: 0 0 0.75rem;
-  color: #111c2d;
+  color: #fff;
   font-size: 1rem;
 }
 
@@ -54,7 +55,7 @@
   grid-template-columns: 1fr auto;
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #d8e3fb;
+  border-top: 1px solid rgba(255,255,255,.12);
   font-size: 0.8rem;
 }
 
@@ -70,7 +71,11 @@
 }
 
 .footer-layout a:hover {
-  color: #3525cd;
+  color: var(--fd-lime, #d7ff63);
+}
+
+.footer-layout a:focus-visible {
+  color: var(--fd-lime, #d7ff63);
 }
 
 @media (max-width: 800px) {

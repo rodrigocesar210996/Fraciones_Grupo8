@@ -8,7 +8,11 @@ function cambiarMetodo(metodo) {
 
             if (metodo === 1) {
                 titulo.textContent = "Calcular con orden riguroso:";
-                formula.textContent = "(3/4 + 1/2) × (2/5 − 6/5)";
+                formula.innerHTML =
+                    '<span class="fraction"><span>3</span><span>4</span></span> + ' +
+                    '<span class="fraction"><span>1</span><span>2</span></span> × ' +
+                    '(<span class="fraction"><span>2</span><span>5</span></span> − ' +
+                    '<span class="fraction"><span>6</span><span>5</span></span>)';
             } else {
                 titulo.textContent = "Calcular usando números decimales:";
                 formula.textContent = "(0.75 + 0.5) × (0.4 − 1.2)";
@@ -17,7 +21,7 @@ function cambiarMetodo(metodo) {
 
         const control = document.getElementById("fraccion");
 
-        control.addEventListener("input", function () {
+        if (control) control.addEventListener("input", function () {
             const valor = Number(this.value) / 4;
             document.getElementById("valor-fraccion").textContent =
                 valor.toFixed(2);
